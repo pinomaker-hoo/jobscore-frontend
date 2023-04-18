@@ -1,11 +1,11 @@
-// ** Next Imports
-import Head from 'next/head'
+// ** Mui Imports
+import { Grid } from '@mui/material'
 
 const Home = () => {
   return (
-    <>
-      <h1>Hello world</h1>
-    </>
+    <Grid container spacing={6}>
+      <Grid item xs={12}></Grid>
+    </Grid>
   )
 }
 
