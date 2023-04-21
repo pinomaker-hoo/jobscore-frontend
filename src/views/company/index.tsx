@@ -22,11 +22,13 @@ const CompanyPageView = () => {
         </Typography>
       </Grid>
       <Grid item xs={12} sx={{ textAlign: 'center' }}>
-        <TextField
-          variant="standard"
-          sx={{ width: '90%' }}
-          placeholder="ex) 구글 코리아"
-        />
+        <Link href="/company/search">
+          <TextField
+            variant="standard"
+            sx={{ width: '90%' }}
+            placeholder="ex) 구글 코리아"
+          />
+        </Link>
       </Grid>
       <Grid item xs={7} />
       <Grid item xs={2} sx={{ textAlign: 'right' }}>
@@ -37,13 +39,11 @@ const CompanyPageView = () => {
       <Grid item xs={3} sx={{ textAlign: 'right', pr: 3, mb: 20 }}>
         <Switch />
       </Grid>
-      <Grid item xs={1} />
-      <Grid item xs={10}>
-        <Button variant="contained" size="large" fullWidth>
+      <Grid item xs={12} sx={{ textAlign: 'center', mt: 8 }}>
+        <Button variant="contained" size="large" sx={{ width: '80%' }}>
           다음
         </Button>
       </Grid>
-      <Grid item xs={1} />
     </Grid>
   )
 }
