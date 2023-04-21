@@ -26,20 +26,17 @@ const Home = () => {
           20문항이며 5분 내외에요
         </Typography>
       </Grid>
-      <Grid item xs={1} />
-      <Grid item xs={10}>
+      <Grid item xs={12} sx={{ textAlign: 'center' }}>
         <Link href="/loading">
           <Button
             variant="contained"
             size="large"
-            sx={{ backgroundColor: '#F4BC00' }}
-            fullWidth
+            sx={{ backgroundColor: '#F4BC00', width: '80%' }}
           >
             잡스코어 측정 시작하기
           </Button>
         </Link>
       </Grid>
-      <Grid item xs={1} />
     </Grid>
   )
 }
