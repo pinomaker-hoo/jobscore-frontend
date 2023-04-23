@@ -5,14 +5,27 @@ import Link from 'next/link'
 // ** Mui Imports
 import { Button, Grid, Typography } from '@mui/material'
 
+import Lottie from 'react-lottie'
+import animationData from '../lotties/test.json'
+
 const Home = () => {
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice',
+    },
+  }
+
   return (
     <Grid container spacing={6}>
       <Grid item xs={12} sx={{ textAlign: 'center' }}>
         <Typography variant="h2">Job Score</Typography>
       </Grid>
       <Grid item xs={12} sx={{ textAlign: 'center' }}>
-        <Image src="/home/home.png" alt="" width={300} height={300} />
+        {/* <Image src="/home/home.png" alt="" width={300} height={300} /> */}
+        <Lottie options={defaultOptions} />
       </Grid>
       <Grid item xs={12} sx={{ textAlign: 'center' }}>
         <Typography variant="h4">잡스코어 측정하기</Typography>
