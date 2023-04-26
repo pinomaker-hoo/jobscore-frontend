@@ -28,7 +28,7 @@ const EndLoadingPage = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      // router.push('/company')
+      router.push('/result')
     }, 3000)
 
     return () => clearInterval(interval)
