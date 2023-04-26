@@ -36,6 +36,7 @@
   "devDependencies": {
     "@types/mui-image": "^1.0.1",
     "@types/react-lottie": "^1.2.6",
-    "@types/react-redux": "^7.1.25"
+    "@types/react-redux": "^7.1.25",
+    "prettier": "^2.8.8"
   }
 }
