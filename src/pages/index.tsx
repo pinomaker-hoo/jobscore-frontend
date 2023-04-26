@@ -1,18 +1,21 @@
 // ** Next Imports
-import Image from 'next/image'
 import Link from 'next/link'
 
 // ** Mui Imports
 import { Button, Grid, Typography } from '@mui/material'
 
+// ** Lottie Imports
 import Lottie from 'react-lottie'
-import animationData from '../lotties/test.json'
+import mainLottie from '../lotties/working-person.json'
+
+// ** Other View Imports
+import WalkingDuck from '@/components/duck/walkingDuck'
 
 const Home = () => {
   const defaultOptions = {
     loop: true,
     autoplay: true,
-    animationData: animationData,
+    animationData: mainLottie,
     rendererSettings: {
       preserveAspectRatio: 'xMidYMid slice',
     },
@@ -20,12 +23,14 @@ const Home = () => {
 
   return (
     <Grid container spacing={6}>
-      <Grid item xs={12} sx={{ textAlign: 'center' }}>
-        <Typography variant="h2">Job Score</Typography>
+      <Grid item xs={4.5}>
+        <img src="/logo.png" height={80} />
+      </Grid>
+      <Grid item xs={7.5} sx={{ mt: 1.5 }}>
+        <WalkingDuck />
       </Grid>
       <Grid item xs={12} sx={{ textAlign: 'center' }}>
-        {/* <Image src="/home/home.png" alt="" width={300} height={300} /> */}
-        <Lottie options={defaultOptions} />
+        <Lottie options={defaultOptions} height={250} width={300} />
       </Grid>
       <Grid item xs={12} sx={{ textAlign: 'center' }}>
         <Typography variant="h4">잡스코어 측정하기</Typography>
