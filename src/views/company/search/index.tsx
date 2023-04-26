@@ -1,9 +1,14 @@
-import CompanyModal from '@/components/modal/companyModal'
-import { Button, Grid, TextField, Typography } from '@mui/material'
+// ** React Imports
 import { useState } from 'react'
 
+// ** Mui Imports
+import { Button, Grid, TextField, Typography } from '@mui/material'
+
+// ** Other View Imports
+import CompanyModal from '@/components/modal/companyModal'
+
 const CompanySearchView = () => {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState<boolean>(false)
 
   const handleOpen = () => setOpen(true)
   const handleClose = () => setOpen(false)
@@ -21,7 +26,7 @@ const CompanySearchView = () => {
         />
       </Grid>
       {trash.map((item: { id: number; name: string }) => (
-        <Grid item xs={12} sx={{ textAlign: 'center' }}>
+        <Grid item xs={12} sx={{ textAlign: 'center' }} key={item.id}>
           <Typography>{item.name}</Typography>
         </Grid>
       ))}
