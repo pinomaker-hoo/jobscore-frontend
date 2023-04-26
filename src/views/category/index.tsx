@@ -51,7 +51,12 @@ const CategoryPageView = () => {
 
   return (
     <Grid container spacing={3}>
-      <Grid item xs={12} sx={{ mt: 20.5, ml: 3 }}>
+      <Grid item xs={3} sx={{ mt: 3, ml: 3 }}>
+        <Link href="/company">
+          <img src="/back.png" height={30} />
+        </Link>
+      </Grid>
+      <Grid item xs={12} sx={{ mt: 10, ml: 3 }}>
         <Typography variant="h4">
           현재 근무중인
           <br /> 부서를 선택해 주세요
