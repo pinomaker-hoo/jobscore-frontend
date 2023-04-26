@@ -7,7 +7,12 @@ import { Button, Grid, Switch, Typography, TextField } from '@mui/material'
 const CompanyPageView = () => {
   return (
     <Grid container spacing={3}>
-      <Grid item xs={12} sx={{ mt: 20, ml: 3 }}>
+      <Grid item xs={3} sx={{ mt: 3, ml: 3 }}>
+        <Link href="/">
+          <img src="/back.png" height={30} />
+        </Link>
+      </Grid>
+      <Grid item xs={12} sx={{ mt: 10, ml: 3 }}>
         <Typography variant="h4">
           현재 재직중인
           <br />
@@ -39,10 +44,12 @@ const CompanyPageView = () => {
       <Grid item xs={3} sx={{ textAlign: 'right', pr: 3, mb: 20 }}>
         <Switch />
       </Grid>
-      <Grid item xs={12} sx={{ textAlign: 'center', mt: 8 }}>
-        <Button variant="contained" size="large" sx={{ width: '80%' }}>
-          다음
-        </Button>
+      <Grid item xs={12} sx={{ textAlign: 'center', mt: 2.8 }}>
+        <Link href="/category">
+          <Button variant="contained" size="large" sx={{ width: '80%' }}>
+            다음
+          </Button>
+        </Link>
       </Grid>
     </Grid>
   )
