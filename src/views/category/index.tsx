@@ -11,26 +11,26 @@ interface Category {
   name: string
   id: number
   size: number
-  type: string
+  type: boolean
 }
 
 const defaultCategory: Category[] = [
-  { type: 'outlined', id: 1, name: '경영 & 기획', size: 4 },
-  { type: 'outlined', id: 2, name: '디자인', size: 3 },
-  { type: 'outlined', id: 3, name: '재무 & 회계', size: 4 },
-  { type: 'outlined', id: 4, name: '마케팅', size: 3 },
-  { type: 'outlined', id: 5, name: '무역', size: 2.5 },
-  { type: 'outlined', id: 6, name: '유통', size: 2.5 },
-  { type: 'outlined', id: 7, name: '생산', size: 2.5 },
-  { type: 'outlined', id: 8, name: '서비스', size: 3 },
-  { type: 'outlined', id: 9, name: '영업', size: 2.5 },
-  { type: 'outlined', id: 10, name: '건설', size: 2.5 },
-  { type: 'outlined', id: 11, name: '개발', size: 2.5 },
-  { type: 'outlined', id: 12, name: '교육', size: 2.5 },
-  { type: 'outlined', id: 13, name: 'MD', size: 2.5 },
-  { type: 'outlined', id: 14, name: 'PO & PM', size: 4 },
-  { type: 'outlined', id: 15, name: '기타', size: 2.5 },
-  { type: 'outlined', id: 16, name: '비공개', size: 3 },
+  { type: false, id: 1, name: '경영 & 기획', size: 4 },
+  { type: false, id: 2, name: '디자인', size: 3 },
+  { type: false, id: 3, name: '재무 & 회계', size: 4 },
+  { type: false, id: 4, name: '마케팅', size: 3 },
+  { type: false, id: 5, name: '무역', size: 2.5 },
+  { type: false, id: 6, name: '유통', size: 2.5 },
+  { type: false, id: 7, name: '생산', size: 2.5 },
+  { type: false, id: 8, name: '서비스', size: 3 },
+  { type: false, id: 9, name: '영업', size: 2.5 },
+  { type: false, id: 10, name: '건설', size: 2.5 },
+  { type: false, id: 11, name: '개발', size: 2.5 },
+  { type: false, id: 12, name: '교육', size: 2.5 },
+  { type: false, id: 13, name: 'MD', size: 2.5 },
+  { type: false, id: 14, name: 'PO & PM', size: 4 },
+  { type: false, id: 15, name: '기타', size: 2.5 },
+  { type: false, id: 16, name: '비공개', size: 3 },
 ]
 
 const CategoryPageView = () => {
@@ -41,7 +41,7 @@ const CategoryPageView = () => {
       if (item.id === id) {
         return {
           ...item,
-          type: item.type === 'outlined' ? 'contained' : 'outlined',
+          type: item.type ? false : true,
         }
       }
       return item
@@ -68,7 +68,7 @@ const CategoryPageView = () => {
           {category.map((item: Category) => (
             <Grid item xs={item.size} key={item.id}>
               <Button
-                variant={item.type}
+                variant={item.type ? 'contained' : 'outlined'}
                 fullWidth
                 onClick={() => onClick(item.id)}
                 sx={{ height: 40 }}
