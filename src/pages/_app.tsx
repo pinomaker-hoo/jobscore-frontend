@@ -12,13 +12,20 @@ import { store } from '@/store'
 // ** Next Imports
 import type { AppProps } from 'next/app'
 
+// ** Other Imports
+import { isMobile } from 'react-device-detect'
+
 const App = ({ Component, pageProps }: AppProps) => {
   return (
     <Provider store={store}>
       <ThemeProvider theme={theme}>
         <GlobalStyles styles={{ backgroundColor: 'blue' }} />
         <CssBaseline />
-        <Component {...pageProps} />
+        <div className={isMobile ? '' : 'container'}>
+          <div className={isMobile ? '' : 'content'}>
+            <Component {...pageProps} />
+          </div>
+        </div>
       </ThemeProvider>
     </Provider>
   )
