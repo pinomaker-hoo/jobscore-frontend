@@ -85,7 +85,7 @@ const CategoryPageView = () => {
         </Grid>
       </Grid>
       <Grid item xs={12} sx={{ textAlign: 'center', mt: 1.5 }}>
-        <Link href="/endLoading">
+        <Link href="/select/intro">
           <Button variant="contained" size="large" sx={{ width: '80%' }}>
             다음
           </Button>
