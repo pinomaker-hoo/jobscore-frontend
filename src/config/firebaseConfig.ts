@@ -4,13 +4,13 @@ import { getFirestore } from 'firebase/firestore'
 import { getAnalytics } from 'firebase/analytics'
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyCoeuKTFLjqU9k6XqUezvRQszWYmlninN0',
-  authDomain: 'jobscore-ad104.firebaseapp.com',
-  projectId: 'jobscore-ad104',
-  storageBucket: 'jobscore-ad104.appspot.com',
-  messagingSenderId: '631261665918',
-  appId: '1:631261665918:web:5bfd407b27c90af923d62f',
-  measurementId: 'G-4EWY41D55B',
+  apiKey: 'AIzaSyCNGcbLn9wOPoK9ZbqsiFBcDwfwjl8v0Go',
+  authDomain: 'jobscore-24472.firebaseapp.com',
+  projectId: 'jobscore-24472',
+  storageBucket: 'jobscore-24472.appspot.com',
+  messagingSenderId: '362585290695',
+  appId: '1:362585290695:web:74a6d784e2b0bd5582cbe2',
+  measurementId: 'G-0CS91SZR6T',
 }
 
 const app = initializeApp(firebaseConfig)
