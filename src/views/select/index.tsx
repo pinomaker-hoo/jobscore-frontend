@@ -30,7 +30,7 @@ const SelectPageView = () => {
       </Grid>
       <Grid item xs={0.5} />
       <Grid item xs={11}>
-        <Card sx={{ width: '100%', p: 2, borderRadius: 2 }}>
+        <Card sx={{ width: '100%', p: 2, borderRadius: 2, height: 470 }}>
           <Grid container>
             <Grid item xs={12} sx={{ textAlign: 'center', mt: -2.5 }}>
               <img src="/common/topBox.png" />

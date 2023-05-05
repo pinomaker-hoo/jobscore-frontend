@@ -1,4 +1,4 @@
-// ** Next Imports
+// ** Next imports
 import Link from 'next/link'
 
 // ** Mui Imports
@@ -6,10 +6,10 @@ import { Button, Card, Grid, Typography } from '@mui/material'
 
 // ** Lottie Imports
 import Lottie from 'react-lottie'
-import mainLottie from '@/lotties/select.json'
+import mainLottie from '@/lotties/selectWant.json'
 import animationData from '@/lotties/walking-duck.json'
 
-const SelectIntroPageView = () => {
+const SelectWantIntroPageView = () => {
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -29,7 +29,7 @@ const SelectIntroPageView = () => {
   }
 
   return (
-    <Grid container sx={{ backgroundColor: '#629DD7', height: '100%' }}>
+    <Grid container sx={{ backgroundColor: '#F4BC00', height: '100%' }}>
       <Grid item xs={3} sx={{ pl: 3, pt: 3 }}>
         <img src="/common/backWhite.png" />
       </Grid>
@@ -43,12 +43,12 @@ const SelectIntroPageView = () => {
             <Grid item xs={12} sx={{ textAlign: 'center', mt: -2.5 }}>
               <img src="/common/topBox.png" />
             </Grid>
-            <Grid item xs={12} sx={{ textAlign: 'center', my: 2 }}>
+            <Grid item xs={12} sx={{ textAlign: 'center' }}>
               <img src="/common/logo.png" height={80} />
             </Grid>
             <Grid item xs={12} sx={{ textAlign: 'center' }}>
               <Typography variant="h6">
-                지금부터 <b>현재 재직중인 회사</b> 에 대한
+                지금부터 <b>내가 원하는 회사</b> 에 대한
                 <br /> 설문을 시작해요, 솔직하게 답변해주세요!
               </Typography>
             </Grid>
@@ -61,14 +61,14 @@ const SelectIntroPageView = () => {
               </Typography>
             </Grid>
             <Grid item xs={12} sx={{ mt: 5 }}>
-              <Link href="/select">
+              <Link href="/selectWant">
                 <Button
                   size="large"
                   variant="outlined"
                   fullWidth
                   sx={{
                     borderRadius: 2,
-                    borderColor: '#123F6C',
+                    borderColor: '#794A13',
                     color: 'black',
                   }}
                 >
@@ -85,4 +85,4 @@ const SelectIntroPageView = () => {
   )
 }
 
-export default SelectIntroPageView
+export default SelectWantIntroPageView
