@@ -16,7 +16,7 @@ const ResultPageView = () => {
   return (
     <Grid container spacing={3}>
       <Grid item xs={4.5}>
-        <img src="/logo.png" height={80} />
+        <img src="/common/logo.png" height={80} />
       </Grid>
       <Grid item xs={7.5} sx={{ mt: 1.5 }}>
         <WalkingDuck />
@@ -116,7 +116,7 @@ const ResultPageView = () => {
                   </Typography>
                 </Grid>
                 <Grid item xs={12} sx={{ textAlign: 'center' }}>
-                  <img src="/type1.png" />
+                  <img src="/type/type1.png" />
                 </Grid>
                 <Grid
                   item
@@ -154,7 +154,7 @@ const ResultPageView = () => {
                   </Typography>
                 </Grid>
                 <Grid item xs={12} sx={{ textAlign: 'center' }}>
-                  <img src="/type2.png" />
+                  <img src="/type/type2.png" />
                 </Grid>
                 <Grid
                   item
@@ -631,19 +631,19 @@ const ResultPageView = () => {
             >
               <Grid container>
                 <Grid item xs={2.4} sx={{ textAlign: 'center' }}>
-                  <img src="/1.png" />
+                  <img src="/review/1.png" />
                 </Grid>
                 <Grid item xs={2.4} sx={{ textAlign: 'center' }}>
-                  <img src="/2.png" />
+                  <img src="/review/2.png" />
                 </Grid>
                 <Grid item xs={2.4} sx={{ textAlign: 'center' }}>
-                  <img src="/3.png" />
+                  <img src="/review/3.png" />
                 </Grid>
                 <Grid item xs={2.4} sx={{ textAlign: 'center' }}>
-                  <img src="/4.png" />
+                  <img src="/review/4.png" />
                 </Grid>
                 <Grid item xs={2.4} sx={{ textAlign: 'center' }}>
-                  <img src="/5.png" />
+                  <img src="/review/5.png" />
                 </Grid>
                 <Grid item xs={2.4} sx={{ textAlign: 'center' }}>
                   <Typography variant="body2" sx={{ fontSize: 10 }}>
@@ -698,10 +698,10 @@ const ResultPageView = () => {
             >
               <Grid container>
                 <Grid item xs={6} sx={{ textAlign: 'center' }}>
-                  <img src="/kakao.png" />
+                  <img src="/share/kakao.png" />
                 </Grid>
                 <Grid item xs={6} sx={{ textAlign: 'center' }}>
-                  <img src="/link.png" />
+                  <img src="/share/link.png" />
                 </Grid>
                 <Grid item xs={6} sx={{ textAlign: 'center' }}>
                   <Typography variant="body2" sx={{ fontSize: 12 }}>

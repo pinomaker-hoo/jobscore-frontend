@@ -37,7 +37,7 @@ const EndLoadingPage = () => {
   return (
     <Grid container spacing={6}>
       <Grid item xs={4.5}>
-        <img src="/logo.png" height={80} />
+        <img src="/common/logo.png" height={80} />
       </Grid>
       <Grid item xs={7.5} sx={{ mt: 1.5 }}>
         <WalkingDuck />

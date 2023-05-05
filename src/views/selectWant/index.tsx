@@ -18,7 +18,7 @@ const SelectWantPageView = () => {
   return (
     <Grid container sx={{ backgroundColor: '#F4BC00', height: '100%' }}>
       <Grid item xs={3} sx={{ pl: 3, pt: 3 }}>
-        <img src="/backWhite.png" />
+        <img src="/common/backWhite.png" />
       </Grid>
       <Grid item xs={9} sx={{ textAlign: 'right', pr: 3, pt: 3 }}>
         <Typography variant="h6" sx={{ color: 'white' }}>
@@ -33,7 +33,7 @@ const SelectWantPageView = () => {
         <Card sx={{ width: '100%', p: 2, borderRadius: 2 }}>
           <Grid container>
             <Grid item xs={12} sx={{ textAlign: 'center', mt: -2.5 }}>
-              <img src="/topBox.png" />
+              <img src="/common/topBox.png" />
             </Grid>
             <Grid item xs={12} sx={{ textAlign: 'center', my: 2 }}>
               <Typography variant="h6">내가 원하는 회사의</Typography>

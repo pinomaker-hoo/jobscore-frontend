@@ -53,7 +53,7 @@ const CategoryPageView = () => {
     <Grid container spacing={3}>
       <Grid item xs={3} sx={{ mt: 3, ml: 3 }}>
         <Link href="/company">
-          <img src="/back.png" height={30} />
+          <img src="/common/back.png" height={30} />
         </Link>
       </Grid>
       <Grid item xs={12} sx={{ mt: 10, ml: 3 }}>
