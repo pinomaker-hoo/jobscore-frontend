@@ -11,6 +11,7 @@ import {
   REGISTER,
 } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
+import user from '@/store/app/user'
 
 // ** Middleware Imports
 import { middleware } from './middleware'
@@ -21,7 +22,9 @@ const persistConfig = {
   storage,
 }
 
-const reducer = combineReducers({})
+const reducer = combineReducers({
+  user,
+})
 
 const persistedReducer = persistReducer(persistConfig, reducer)
 
