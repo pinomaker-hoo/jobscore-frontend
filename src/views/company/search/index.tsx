@@ -16,8 +16,20 @@ import {
 
 // ** Other View Imports
 import CompanyModal from '@/components/modal/companyModal'
+import { CompanyType } from '@/types'
 
-const CompanySearchView = () => {
+interface Props {
+  word: string
+  companyList: CompanyType[]
+  handleRefetch: () => void
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+}
+const CompanySearchView = ({
+  word,
+  companyList,
+  onChange,
+  handleRefetch,
+}: Props) => {
   const [open, setOpen] = useState<boolean>(false)
 
   const handleOpen = () => setOpen(true)
@@ -40,25 +52,26 @@ const CompanySearchView = () => {
             boxShadow: 'none',
           }}
         >
-          <IconButton
-            type="button"
-            sx={{ p: '10px' }}
-            onClick={() => console.log('CLICK')}
-          >
+          <IconButton type="button" sx={{ p: '10px' }} onClick={handleRefetch}>
             <img src="/search/icon.png" />
           </IconButton>
-          <InputBase sx={{ ml: 1, flex: 1 }} placeholder="회사명으로 검색" />
+          <InputBase
+            sx={{ ml: 1, flex: 1 }}
+            placeholder="회사명으로 검색"
+            onChange={onChange}
+            value={word}
+          />
         </Paper>
       </Grid>
       <Grid item xs={12}>
-        {trash.map((item: any, index: number) => (
+        {companyList.map((item: CompanyType, index: number) => (
           <Grid container sx={{ mt: 1 }} key={index}>
             <Grid item xs={3} sx={{ textAlign: 'center' }}>
-              <img src={item.img ? item.img : '/search/company.png'} />
+              <img src={'/search/company.png'} />
             </Grid>
             <Grid item xs={9}>
               <Link
-                href={`/company?id=${item.uid}&name=${item.name}`}
+                href={`/company?id=${item.id}&name=${item.name}`}
                 style={{ textDecoration: 'none' }}
               >
                 <Typography variant="body1" sx={{ color: 'black' }}>
@@ -77,7 +90,13 @@ const CompanySearchView = () => {
           </Typography>
         </Button>
       </Grid>
-      {open && <CompanyModal open={open} handleClose={handleClose} />}
+      {open && (
+        <CompanyModal
+          open={open}
+          handleClose={handleClose}
+          handleRefetch={handleRefetch}
+        />
+      )}
     </Grid>
   )
 }
