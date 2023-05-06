@@ -3,11 +3,14 @@ import { Button, Dialog, Grid, TextField, Typography } from '@mui/material'
 
 // ** Type Imports
 import { SaveCompanyType } from '@/types'
+import BasicModal from '../basicModal'
 
 interface Props {
   open: boolean
   company: SaveCompanyType
   setCompany: any
+  openFalse: boolean
+  handleCloseFalse: () => void
   handleClose: () => void
   regContent: () => void
 }
@@ -18,6 +21,8 @@ const CompanyModalView = ({
   company,
   setCompany,
   regContent,
+  openFalse,
+  handleCloseFalse,
 }: Props) => {
   return (
     <Dialog open={open} onClose={handleClose} fullWidth maxWidth="md">
@@ -65,6 +70,13 @@ const CompanyModalView = ({
           </Button>
         </Grid>
       </Grid>
+      {openFalse && (
+        <BasicModal
+          state={openFalse}
+          handleClose={handleCloseFalse}
+          title="데이터를 전부 입력해주세요!"
+        />
+      )}
     </Dialog>
   )
 }
