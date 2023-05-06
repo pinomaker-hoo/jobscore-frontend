@@ -1,11 +1,24 @@
+// ** Mui Imports
 import { Button, Dialog, Grid, TextField, Typography } from '@mui/material'
 
-interface CompanyModalViewProps {
+// ** Type Imports
+import { SaveCompanyType } from '@/types'
+
+interface Props {
   open: boolean
+  company: SaveCompanyType
+  setCompany: any
   handleClose: () => void
+  regContent: () => void
 }
 
-const CompanyModalView = ({ open, handleClose }: CompanyModalViewProps) => {
+const CompanyModalView = ({
+  open,
+  handleClose,
+  company,
+  setCompany,
+  regContent,
+}: Props) => {
   return (
     <Dialog open={open} onClose={handleClose} fullWidth maxWidth="md">
       <Grid container spacing={3} sx={{ p: 3 }}>
@@ -19,10 +32,24 @@ const CompanyModalView = ({ open, handleClose }: CompanyModalViewProps) => {
           </Typography>
         </Grid>
         <Grid item xs={12}>
-          <TextField variant="standard" fullWidth label="회사명" />
+          <TextField
+            variant="standard"
+            fullWidth
+            label="회사명"
+            value={company.name}
+            onChange={setCompany}
+            name="name"
+          />
         </Grid>
         <Grid item xs={12}>
-          <TextField variant="standard" fullWidth label="회사 홈페이지 주소" />
+          <TextField
+            variant="standard"
+            fullWidth
+            label="회사 홈페이지 주소"
+            value={company.url}
+            onChange={setCompany}
+            name="url"
+          />
         </Grid>
         <Grid item xs={12}>
           <Typography variant="body2">
@@ -33,7 +60,7 @@ const CompanyModalView = ({ open, handleClose }: CompanyModalViewProps) => {
           </Typography>
         </Grid>
         <Grid item xs={12}>
-          <Button fullWidth variant="contained" onClick={handleClose}>
+          <Button fullWidth variant="contained" onClick={regContent}>
             등록하기
           </Button>
         </Grid>
