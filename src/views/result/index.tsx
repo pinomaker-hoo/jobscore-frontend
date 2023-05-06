@@ -24,318 +24,521 @@ const ResultPageView = () => {
       <Grid item xs={12} sx={{ overflow: 'scroll', maxHeight: '730px' }}>
         <Grid container spacing={3}>
           <Grid item xs={12}>
-            <Typography sx={{ ml: '10%', width: '80%' }} variant="h6">
-              우리 회사 잡스코어
-            </Typography>
-          </Grid>
-          <Grid item xs={12} sx={{ mt: -2 }}>
             <Card
               sx={{
                 p: 3,
-                width: '80%',
-                ml: '10%',
-                backgroundColor: '#E8F4FF',
+                width: '90%',
+                ml: '5%',
+                backgroundColor: alpha('#B8DDFF', 0.2),
                 boxShadow: 'none',
                 borderRadius: 3,
               }}
             >
               <Grid container>
                 <Grid item xs={12} sx={{ textAlign: 'center' }}>
+                  <Typography sx={{ ml: '10%', width: '80%' }} variant="h6">
+                    우리 회사 잡스코어
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} sx={{ textAlign: 'center' }}>
                   <DounetChart height={300} series={60} />
                 </Grid>
                 <Grid item xs={12}>
-                  <Divider sx={{ borderColor: 'white', borderWidth: 1 }} />
+                  <Divider
+                    sx={{
+                      borderColor: 'white',
+                      borderWidth: 1.5,
+                      width: '90%',
+                      ml: '5%',
+                    }}
+                  />
                 </Grid>
                 <Grid item xs={12} sx={{ textAlign: 'center', mt: 2 }}>
                   <Typography variant="body2">
-                    꿈의 회사가 실존 하네요! <br />
-                    나는 지금 회사에 몇퍼센트 만족하시나요?
+                    <b>
+                      꿈의 회사가 실존 하네요! <br />
+                      나는 지금 회사에 몇퍼센트 만족하시나요?
+                    </b>
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} sx={{ mt: 2 }}>
+                  <Divider
+                    sx={{
+                      borderColor: 'white',
+                      borderWidth: 1.5,
+                      width: '90%',
+                      ml: '5%',
+                    }}
+                  />
+                </Grid>
+                <Grid item xs={12} sx={{ textAlign: 'center', mt: 2 }}>
+                  <Typography sx={{ ml: '10%', width: '80%' }} variant="h6">
+                    우리 회사의 잡스타일은?
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} sx={{ textAlign: 'center', mt: 2 }}>
+                  <img src="/type/type1.png" style={{ width: '70%' }} />
+                </Grid>
+                <Grid item xs={12} sx={{ textAlign: 'center', mt: 2 }}>
+                  <Typography
+                    sx={{ ml: '10%', width: '80%', color: '#2084F2' }}
+                    variant="h6"
+                  >
+                    "지상낙원" 스타일
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} sx={{ textAlign: 'center' }}>
+                  <Typography
+                    sx={{ ml: '10%', width: '80%', fontSize: 12 }}
+                    variant="body2"
+                  >
+                    몸과 마음 다 여유로운 회사 생활이 될 수 있겠어요.
+                  </Typography>
+                </Grid>
+                <Grid item xs={6} sx={{ mt: 3 }}>
+                  <Typography variant="body1" sx={{ fontSize: 14 }}>
+                    업무 강도 점수
+                  </Typography>
+                </Grid>
+                <Grid item xs={6} sx={{ textAlign: 'right', mt: 3 }}>
+                  <Typography variant="body1" sx={{ fontSize: 14 }}>
+                    182 / 200
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} sx={{ textAlign: 'center', my: 1 }}>
+                  <LinearProgress
+                    variant="determinate"
+                    value={60}
+                    color="error"
+                    sx={{
+                      height: 20,
+                      borderRadius: 5,
+                      backgroundColor: alpha('#B4B4B4', 0.2),
+                    }}
+                  />
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography variant="body1" sx={{ fontSize: 10 }}>
+                    업무 강도 높음
+                  </Typography>
+                </Grid>
+                <Grid item xs={6} sx={{ textAlign: 'right' }}>
+                  <Typography variant="body1" sx={{ fontSize: 10 }}>
+                    업무 강도 낮음
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} sx={{ my: 1 }}>
+                  <Divider sx={{ borderWidth: 1, borderColor: 'white' }} />
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography variant="body1" sx={{ fontSize: 14 }}>
+                    출 퇴근 자유도
+                  </Typography>
+                </Grid>
+                <Grid item xs={6} sx={{ textAlign: 'right' }}>
+                  <Typography variant="body1" sx={{ fontSize: 14 }}>
+                    182 / 200
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} sx={{ textAlign: 'center', my: 1 }}>
+                  <LinearProgress
+                    variant="determinate"
+                    value={60}
+                    color="error"
+                    sx={{
+                      height: 20,
+                      borderRadius: 5,
+                      backgroundColor: alpha('#B4B4B4', 0.2),
+                    }}
+                  />
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography variant="body1" sx={{ fontSize: 10 }}>
+                    자유롭지 않음
+                  </Typography>
+                </Grid>
+                <Grid item xs={6} sx={{ textAlign: 'right' }}>
+                  <Typography variant="body1" sx={{ fontSize: 10 }}>
+                    자유로움
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} sx={{ my: 1 }}>
+                  <Divider sx={{ borderWidth: 1, borderColor: 'white' }} />
+                </Grid>
+                <Grid item xs={5}>
+                  <Typography variant="body1" sx={{ fontSize: 14 }}>
+                    복지 점수
+                  </Typography>
+                </Grid>
+                <Grid item xs={7} sx={{ textAlign: 'right' }}>
+                  <Typography variant="body1" sx={{ fontSize: 14 }}>
+                    182 / 200
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} sx={{ textAlign: 'center', my: 1 }}>
+                  <LinearProgress
+                    variant="determinate"
+                    value={60}
+                    color="error"
+                    sx={{
+                      height: 20,
+                      borderRadius: 5,
+                      backgroundColor: alpha('#B4B4B4', 0.2),
+                    }}
+                  />
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography variant="body1" sx={{ fontSize: 10 }}>
+                    복지 적음
+                  </Typography>
+                </Grid>
+                <Grid item xs={6} sx={{ textAlign: 'right' }}>
+                  <Typography variant="body1" sx={{ fontSize: 10 }}>
+                    복지 많음
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} sx={{ my: 1 }}>
+                  <Divider sx={{ borderWidth: 1, borderColor: 'white' }} />
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography variant="body1" sx={{ fontSize: 14 }}>
+                    성장 가능성
+                  </Typography>
+                </Grid>
+                <Grid item xs={6} sx={{ textAlign: 'right' }}>
+                  <Typography variant="body1" sx={{ fontSize: 14 }}>
+                    182 / 200
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} sx={{ textAlign: 'center', my: 1 }}>
+                  <LinearProgress
+                    variant="determinate"
+                    value={60}
+                    color="error"
+                    sx={{
+                      height: 20,
+                      borderRadius: 5,
+                      backgroundColor: alpha('#B4B4B4', 0.2),
+                    }}
+                  />
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography variant="body1" sx={{ fontSize: 10 }}>
+                    성장 가능성 적음
+                  </Typography>
+                </Grid>
+                <Grid item xs={6} sx={{ textAlign: 'right' }}>
+                  <Typography variant="body1" sx={{ fontSize: 10 }}>
+                    성장 가능성 높음
                   </Typography>
                 </Grid>
               </Grid>
             </Card>
           </Grid>
-          <Grid item xs={12} sx={{ mt: 3 }}>
-            <Typography sx={{ ml: '10%', width: '80%' }} variant="h6">
-              내가 원하는 회사 잡스코어
-            </Typography>
-          </Grid>
-          <Grid item xs={12} sx={{ mt: -2 }}>
+          <Grid item xs={12}>
             <Card
               sx={{
                 p: 3,
-                width: '80%',
-                ml: '10%',
-                backgroundColor: alpha('#B6B9FF', 0.2),
+                width: '90%',
+                ml: '5%',
+                backgroundColor: '#FFFBEE',
                 boxShadow: 'none',
                 borderRadius: 3,
               }}
             >
               <Grid container>
                 <Grid item xs={12} sx={{ textAlign: 'center' }}>
+                  <Typography sx={{ ml: '10%', width: '80%' }} variant="h6">
+                    내가 원하는 회사 잡스코어
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} sx={{ textAlign: 'center' }}>
                   <DounetChart height={300} series={60} />
                 </Grid>
                 <Grid item xs={12}>
-                  <Divider sx={{ borderColor: 'white', borderWidth: 1 }} />
+                  <Divider
+                    sx={{
+                      borderColor: 'white',
+                      borderWidth: 1.5,
+                      width: '90%',
+                      ml: '5%',
+                    }}
+                  />
                 </Grid>
                 <Grid item xs={12} sx={{ textAlign: 'center', mt: 2 }}>
                   <Typography variant="body2">
-                    지금 회사가 내 목표치 보다 높아요! <br />
-                    이대로.. Stay?
+                    <b>
+                      꿈의 회사가 실존 하네요! <br />
+                      나는 지금 회사에 몇퍼센트 만족하시나요?
+                    </b>
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} sx={{ mt: 2 }}>
+                  <Divider
+                    sx={{
+                      borderColor: 'white',
+                      borderWidth: 1.5,
+                      width: '90%',
+                      ml: '5%',
+                    }}
+                  />
+                </Grid>
+                <Grid item xs={12} sx={{ textAlign: 'center', mt: 2 }}>
+                  <Typography sx={{ ml: '10%', width: '80%' }} variant="h6">
+                    내가 원하는 회사의 잡스타일은?
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} sx={{ textAlign: 'center', mt: 2 }}>
+                  <img src="/type/type2.png" style={{ width: '70%' }} />
+                </Grid>
+                <Grid item xs={12} sx={{ textAlign: 'center', mt: 2 }}>
+                  <Typography
+                    sx={{ ml: '10%', width: '80%', color: '#2084F2' }}
+                    variant="h6"
+                  >
+                    "지상낙원" 스타일
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} sx={{ textAlign: 'center' }}>
+                  <Typography
+                    sx={{ ml: '10%', width: '80%', fontSize: 12 }}
+                    variant="body2"
+                  >
+                    몸과 마음 다 여유로운 회사 생활이 될 수 있겠어요.
+                  </Typography>
+                </Grid>
+                <Grid item xs={6} sx={{ mt: 3 }}>
+                  <Typography variant="body1" sx={{ fontSize: 14 }}>
+                    업무 강도 점수
+                  </Typography>
+                </Grid>
+                <Grid item xs={6} sx={{ textAlign: 'right', mt: 3 }}>
+                  <Typography variant="body1" sx={{ fontSize: 14 }}>
+                    182 / 200
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} sx={{ textAlign: 'center', my: 1 }}>
+                  <LinearProgress
+                    variant="determinate"
+                    value={60}
+                    color="error"
+                    sx={{
+                      height: 20,
+                      borderRadius: 5,
+                      backgroundColor: alpha('#B4B4B4', 0.2),
+                    }}
+                  />
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography variant="body1" sx={{ fontSize: 10 }}>
+                    업무 강도 높음
+                  </Typography>
+                </Grid>
+                <Grid item xs={6} sx={{ textAlign: 'right' }}>
+                  <Typography variant="body1" sx={{ fontSize: 10 }}>
+                    업무 강도 낮음
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} sx={{ my: 1 }}>
+                  <Divider sx={{ borderWidth: 1, borderColor: 'white' }} />
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography variant="body1" sx={{ fontSize: 14 }}>
+                    출 퇴근 자유도
+                  </Typography>
+                </Grid>
+                <Grid item xs={6} sx={{ textAlign: 'right' }}>
+                  <Typography variant="body1" sx={{ fontSize: 14 }}>
+                    182 / 200
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} sx={{ textAlign: 'center', my: 1 }}>
+                  <LinearProgress
+                    variant="determinate"
+                    value={60}
+                    color="error"
+                    sx={{
+                      height: 20,
+                      borderRadius: 5,
+                      backgroundColor: alpha('#B4B4B4', 0.2),
+                    }}
+                  />
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography variant="body1" sx={{ fontSize: 10 }}>
+                    자유롭지 않음
+                  </Typography>
+                </Grid>
+                <Grid item xs={6} sx={{ textAlign: 'right' }}>
+                  <Typography variant="body1" sx={{ fontSize: 10 }}>
+                    자유로움
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} sx={{ my: 1 }}>
+                  <Divider sx={{ borderWidth: 1, borderColor: 'white' }} />
+                </Grid>
+                <Grid item xs={5}>
+                  <Typography variant="body1" sx={{ fontSize: 14 }}>
+                    복지 점수
+                  </Typography>
+                </Grid>
+                <Grid item xs={7} sx={{ textAlign: 'right' }}>
+                  <Typography variant="body1" sx={{ fontSize: 14 }}>
+                    182 / 200
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} sx={{ textAlign: 'center', my: 1 }}>
+                  <LinearProgress
+                    variant="determinate"
+                    value={60}
+                    color="error"
+                    sx={{
+                      height: 20,
+                      borderRadius: 5,
+                      backgroundColor: alpha('#B4B4B4', 0.2),
+                    }}
+                  />
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography variant="body1" sx={{ fontSize: 10 }}>
+                    복지 적음
+                  </Typography>
+                </Grid>
+                <Grid item xs={6} sx={{ textAlign: 'right' }}>
+                  <Typography variant="body1" sx={{ fontSize: 10 }}>
+                    복지 많음
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} sx={{ my: 1 }}>
+                  <Divider sx={{ borderWidth: 1, borderColor: 'white' }} />
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography variant="body1" sx={{ fontSize: 14 }}>
+                    성장 가능성
+                  </Typography>
+                </Grid>
+                <Grid item xs={6} sx={{ textAlign: 'right' }}>
+                  <Typography variant="body1" sx={{ fontSize: 14 }}>
+                    182 / 200
+                  </Typography>
+                </Grid>
+                <Grid item xs={12} sx={{ textAlign: 'center', my: 1 }}>
+                  <LinearProgress
+                    variant="determinate"
+                    value={60}
+                    color="error"
+                    sx={{
+                      height: 20,
+                      borderRadius: 5,
+                      backgroundColor: alpha('#B4B4B4', 0.2),
+                    }}
+                  />
+                </Grid>
+                <Grid item xs={6}>
+                  <Typography variant="body1" sx={{ fontSize: 10 }}>
+                    성장 가능성 적음
+                  </Typography>
+                </Grid>
+                <Grid item xs={6} sx={{ textAlign: 'right' }}>
+                  <Typography variant="body1" sx={{ fontSize: 10 }}>
+                    성장 가능성 높음
                   </Typography>
                 </Grid>
               </Grid>
             </Card>
           </Grid>
-          <Grid item xs={12} sx={{ mt: 3 }}>
+          <Grid item xs={12}>
             <Typography sx={{ ml: '10%', width: '80%' }} variant="h6">
-              잡스타일 비교하기
+              잡스코어 비교하기
             </Typography>
           </Grid>
-          <Grid item xs={1} />
-          <Grid item xs={5}>
+          <Grid item xs={12}>
+            <Typography
+              sx={{ ml: '10%', width: '80%', fontSize: 12, mt: -2 }}
+              variant="body2"
+            >
+              내가 원하는 회사와 점수차이가 크다면 이직을 고민해보는것도 방법!
+            </Typography>
+          </Grid>
+          <Grid item xs={6}>
             <Card
               sx={{
                 p: 3,
-                backgroundColor: alpha('#6EB9FF', 0.2),
+                width: '90%',
+                ml: '10%',
+                backgroundColor: alpha('#B8DDFF', 0.2),
                 boxShadow: 'none',
                 borderRadius: 3,
               }}
             >
               <Grid container>
-                <Grid
-                  item
-                  xs={12}
-                  sx={{
-                    textAlign: 'center',
-                    mb: 2,
-                  }}
-                >
-                  <Typography variant="h6" sx={{ fontSize: 14 }}>
+                <Grid item xs={12}>
+                  <Typography variant="h6">업무 강도</Typography>
+                </Grid>
+                <Grid item xs={12} sx={{ mt: 2 }}>
+                  <Typography variant="body2" sx={{ fontSize: 10 }}>
                     우리 회사
                   </Typography>
                 </Grid>
-                <Grid item xs={12} sx={{ textAlign: 'center' }}>
-                  <img src="/type/type1.png" />
+                <Grid item xs={12}>
+                  <Typography variant="h6">72/180</Typography>
                 </Grid>
-                <Grid
-                  item
-                  xs={12}
-                  sx={{
-                    textAlign: 'center',
-                    mt: 2,
-                  }}
-                >
-                  <Typography variant="h6">"스파르타"</Typography>
+                <Grid item xs={12} sx={{ mt: 2 }}>
+                  <Typography variant="body2" sx={{ fontSize: 10 }}>
+                    내가 원하는 회사
+                  </Typography>
+                </Grid>
+                <Grid item xs={9}>
+                  <Typography variant="h6">123/180</Typography>
+                </Grid>
+                <Grid item xs={3}>
+                  <img src="/review/num.png" />
                 </Grid>
               </Grid>
             </Card>
           </Grid>
-          <Grid item xs={5}>
+          <Grid item xs={6}>
             <Card
               sx={{
                 p: 3,
-                backgroundColor: alpha('#6EB9FF', 0.2),
+                width: '90%',
+
+                backgroundColor: alpha('#B8DDFF', 0.2),
                 boxShadow: 'none',
                 borderRadius: 3,
               }}
             >
               <Grid container>
-                <Grid
-                  item
-                  xs={12}
-                  sx={{
-                    textAlign: 'center',
-                    mb: 2,
-                  }}
-                >
-                  <Typography variant="h6" sx={{ fontSize: 14 }}>
+                <Grid item xs={12}>
+                  <Typography variant="h6">업무 강도</Typography>
+                </Grid>
+                <Grid item xs={12} sx={{ mt: 2 }}>
+                  <Typography variant="body2" sx={{ fontSize: 10 }}>
+                    우리 회사
+                  </Typography>
+                </Grid>
+                <Grid item xs={12}>
+                  <Typography variant="h6">72/180</Typography>
+                </Grid>
+                <Grid item xs={12} sx={{ mt: 2 }}>
+                  <Typography variant="body2" sx={{ fontSize: 10 }}>
                     내가 원하는 회사
                   </Typography>
                 </Grid>
-                <Grid item xs={12} sx={{ textAlign: 'center' }}>
-                  <img src="/type/type2.png" />
+                <Grid item xs={9}>
+                  <Typography variant="h6">123/180</Typography>
                 </Grid>
-                <Grid
-                  item
-                  xs={12}
-                  sx={{
-                    textAlign: 'center',
-                    mt: 2,
-                  }}
-                >
-                  <Typography variant="h6">"워커홀릭"</Typography>
+                <Grid item xs={3}>
+                  <img src="/review/num.png" />
                 </Grid>
               </Grid>
             </Card>
           </Grid>
-          <Grid item xs={1} />
-          <Grid item xs={1} />
-          <Grid item xs={5}>
-            <Grid container spacing={3}>
-              <Grid item xs={12} sx={{ textAlign: 'center' }}>
-                <Typography variant="h6" sx={{ fontSize: 14, my: -1 }}>
-                  자지말고 일만해라 인간
-                </Typography>
-              </Grid>
-              <Grid item xs={12}>
-                <Divider
-                  sx={{
-                    borderWidth: 1,
-                    backgroundColor: '#CBE6FF',
-                    ml: '10%',
-                    width: '80%',
-                  }}
-                />
-              </Grid>
-              <Grid item xs={12} sx={{ textAlign: 'center' }}>
-                <Typography variant="h6" sx={{ fontSize: 14, mt: -1 }}>
-                  30%의 회사가 동일한
-                  <br /> 유형을 가지고 있어요
-                </Typography>
-              </Grid>
-            </Grid>
-          </Grid>
-          <Grid item xs={5}>
-            <Grid container spacing={3}>
-              <Grid item xs={12} sx={{ textAlign: 'center' }}>
-                <Typography variant="h6" sx={{ fontSize: 14, my: -1 }}>
-                  워라벨이 뭐죠?
-                </Typography>
-              </Grid>
-              <Grid item xs={12}>
-                <Divider
-                  sx={{
-                    borderWidth: 1,
-                    backgroundColor: '#CBE6FF',
-                    ml: '10%',
-                    width: '80%',
-                  }}
-                />
-              </Grid>
-              <Grid item xs={12} sx={{ textAlign: 'center' }}>
-                <Typography variant="h6" sx={{ fontSize: 14, mt: -1 }}>
-                  10%의 직장인이 <br />
-                  이런 회사를 원해요
-                </Typography>
-              </Grid>
-            </Grid>
-          </Grid>
-          {/* 업무 강도 */}
-          <Grid item xs={12} sx={{ mt: 3 }}>
-            <Typography sx={{ ml: '10%', width: '80%' }} variant="h6">
-              업무 강도 비교하기
-            </Typography>
-          </Grid>
-          <Grid item xs={12}>
-            <Typography
-              sx={{ ml: '10%', width: '80%', fontSize: 12, mt: -2 }}
-              variant="body2"
-            >
-              현 회사의 업무 강도와 내가 원하는 회사의 업무 강도를 보여줘요
-            </Typography>
-          </Grid>
-          <Grid item xs={12} sx={{ mt: -2 }}>
+          <Grid item xs={6}>
             <Card
               sx={{
                 p: 3,
-                width: '80%',
-                ml: '10%',
-                backgroundColor: alpha('#FFECA9', 0.2),
-                boxShadow: 'none',
-                borderRadius: 3,
-              }}
-            >
-              <Grid container>
-                <Grid item xs={6}>
-                  <Typography variant="body1" sx={{ fontSize: 14 }}>
-                    주식회사 카카오
-                  </Typography>
-                </Grid>
-                <Grid item xs={6} sx={{ textAlign: 'right' }}>
-                  <Typography variant="body1" sx={{ fontSize: 14 }}>
-                    182 / 200
-                  </Typography>
-                </Grid>
-                <Grid item xs={12} sx={{ textAlign: 'center', my: 1 }}>
-                  <LinearProgress
-                    variant="determinate"
-                    value={60}
-                    color="error"
-                    sx={{
-                      height: 20,
-                      borderRadius: 5,
-                      backgroundColor: alpha('#B4B4B4', 0.2),
-                    }}
-                  />
-                </Grid>
-                <Grid item xs={6}>
-                  <Typography variant="body1" sx={{ fontSize: 10 }}>
-                    업무 강도 높음
-                  </Typography>
-                </Grid>
-                <Grid item xs={6} sx={{ textAlign: 'right' }}>
-                  <Typography variant="body1" sx={{ fontSize: 10 }}>
-                    업무 강도 낮음
-                  </Typography>
-                </Grid>
-                <Grid item xs={12} sx={{ my: 3 }}>
-                  <Divider sx={{ borderWidth: 1, borderColor: 'white' }} />
-                </Grid>
-                <Grid item xs={6}>
-                  <Typography variant="body1" sx={{ fontSize: 14 }}>
-                    내가 원하는 회사
-                  </Typography>
-                </Grid>
-                <Grid item xs={6} sx={{ textAlign: 'right' }}>
-                  <Typography variant="body1" sx={{ fontSize: 14 }}>
-                    182 / 200
-                  </Typography>
-                </Grid>
-                <Grid item xs={12} sx={{ textAlign: 'center', my: 1 }}>
-                  <LinearProgress
-                    variant="determinate"
-                    value={60}
-                    color="error"
-                    sx={{
-                      height: 20,
-                      borderRadius: 5,
-                      backgroundColor: alpha('#B4B4B4', 0.2),
-                    }}
-                  />
-                </Grid>
-                <Grid item xs={6}>
-                  <Typography variant="body1" sx={{ fontSize: 10 }}>
-                    업무 강도 높음
-                  </Typography>
-                </Grid>
-                <Grid item xs={6} sx={{ textAlign: 'right' }}>
-                  <Typography variant="body1" sx={{ fontSize: 10 }}>
-                    업무 강도 낮음
-                  </Typography>
-                </Grid>
-              </Grid>
-            </Card>
-          </Grid>
-          {/* 출 퇴근 유연성 */}
-          <Grid item xs={12} sx={{ mt: 3 }}>
-            <Typography sx={{ ml: '10%', width: '80%' }} variant="h6">
-              출 퇴근 유연성 비교하기
-            </Typography>
-          </Grid>
-          <Grid item xs={12}>
-            <Typography
-              sx={{ ml: '10%', width: '80%', fontSize: 12, mt: -2 }}
-              variant="body2"
-            >
-              현 회사의 출퇴근 유연성과 내가 원하는 회사를 비교해 보여줘요
-            </Typography>
-          </Grid>
-          <Grid item xs={12} sx={{ mt: -2 }}>
-            <Card
-              sx={{
-                p: 3,
-                width: '80%',
+                width: '90%',
                 ml: '10%',
                 backgroundColor: alpha('#B8DDFF', 0.2),
                 boxShadow: 'none',
@@ -343,332 +546,63 @@ const ResultPageView = () => {
               }}
             >
               <Grid container>
-                <Grid item xs={6}>
-                  <Typography variant="body1" sx={{ fontSize: 14 }}>
-                    주식회사 카카오
+                <Grid item xs={12}>
+                  <Typography variant="h6">업무 강도</Typography>
+                </Grid>
+                <Grid item xs={12} sx={{ mt: 2 }}>
+                  <Typography variant="body2" sx={{ fontSize: 10 }}>
+                    우리 회사
                   </Typography>
                 </Grid>
-                <Grid item xs={6} sx={{ textAlign: 'right' }}>
-                  <Typography variant="body1" sx={{ fontSize: 14 }}>
-                    182 / 200
-                  </Typography>
+                <Grid item xs={12}>
+                  <Typography variant="h6">72/180</Typography>
                 </Grid>
-                <Grid item xs={12} sx={{ textAlign: 'center', my: 1 }}>
-                  <LinearProgress
-                    variant="determinate"
-                    value={60}
-                    color="error"
-                    sx={{
-                      height: 20,
-                      borderRadius: 5,
-                      backgroundColor: alpha('#B4B4B4', 0.2),
-                    }}
-                  />
-                </Grid>
-                <Grid item xs={6}>
-                  <Typography variant="body1" sx={{ fontSize: 10 }}>
-                    유연하지 않음
-                  </Typography>
-                </Grid>
-                <Grid item xs={6} sx={{ textAlign: 'right' }}>
-                  <Typography variant="body1" sx={{ fontSize: 10 }}>
-                    유연함
-                  </Typography>
-                </Grid>
-                <Grid item xs={12} sx={{ my: 3 }}>
-                  <Divider sx={{ borderWidth: 1, borderColor: 'white' }} />
-                </Grid>
-                <Grid item xs={6}>
-                  <Typography variant="body1" sx={{ fontSize: 14 }}>
+                <Grid item xs={12} sx={{ mt: 2 }}>
+                  <Typography variant="body2" sx={{ fontSize: 10 }}>
                     내가 원하는 회사
                   </Typography>
                 </Grid>
-                <Grid item xs={6} sx={{ textAlign: 'right' }}>
-                  <Typography variant="body1" sx={{ fontSize: 14 }}>
-                    182 / 200
-                  </Typography>
+                <Grid item xs={9}>
+                  <Typography variant="h6">123/180</Typography>
                 </Grid>
-                <Grid item xs={12} sx={{ textAlign: 'center', my: 1 }}>
-                  <LinearProgress
-                    variant="determinate"
-                    value={60}
-                    color="error"
-                    sx={{
-                      height: 20,
-                      borderRadius: 5,
-                      backgroundColor: alpha('#B4B4B4', 0.2),
-                    }}
-                  />
-                </Grid>
-                <Grid item xs={6}>
-                  <Typography variant="body1" sx={{ fontSize: 10 }}>
-                    유연하지 않음
-                  </Typography>
-                </Grid>
-                <Grid item xs={6} sx={{ textAlign: 'right' }}>
-                  <Typography variant="body1" sx={{ fontSize: 10 }}>
-                    유연함
-                  </Typography>
+                <Grid item xs={3}>
+                  <img src="/review/num.png" />
                 </Grid>
               </Grid>
             </Card>
           </Grid>
-          {/* 복지 */}
-          <Grid item xs={12} sx={{ mt: 3 }}>
-            <Typography sx={{ ml: '10%', width: '80%' }} variant="h6">
-              복지 비교하기
-            </Typography>
-          </Grid>
-          <Grid item xs={12}>
-            <Typography
-              sx={{ ml: '10%', width: '80%', fontSize: 12, mt: -2 }}
-              variant="body2"
-            >
-              현 회사의 복지와 내가 원하는 회사를 비교해 보여줘요
-            </Typography>
-          </Grid>
-          <Grid item xs={12} sx={{ mt: -2 }}>
+          <Grid item xs={6}>
             <Card
               sx={{
                 p: 3,
-                width: '80%',
-                ml: '10%',
-                backgroundColor: alpha('#FFECA9', 0.2),
-                boxShadow: 'none',
-                borderRadius: 3,
-              }}
-            >
-              <Grid container>
-                <Grid item xs={6}>
-                  <Typography variant="body1" sx={{ fontSize: 14 }}>
-                    주식회사 카카오
-                  </Typography>
-                </Grid>
-                <Grid item xs={6} sx={{ textAlign: 'right' }}>
-                  <Typography variant="body1" sx={{ fontSize: 14 }}>
-                    182 / 200
-                  </Typography>
-                </Grid>
-                <Grid item xs={12} sx={{ textAlign: 'center', my: 1 }}>
-                  <LinearProgress
-                    variant="determinate"
-                    value={60}
-                    color="error"
-                    sx={{
-                      height: 20,
-                      borderRadius: 5,
-                      backgroundColor: alpha('#B4B4B4', 0.2),
-                    }}
-                  />
-                </Grid>
-                <Grid item xs={6}>
-                  <Typography variant="body1" sx={{ fontSize: 10 }}>
-                    유연하지 않음
-                  </Typography>
-                </Grid>
-                <Grid item xs={6} sx={{ textAlign: 'right' }}>
-                  <Typography variant="body1" sx={{ fontSize: 10 }}>
-                    유연함
-                  </Typography>
-                </Grid>
-                <Grid item xs={12} sx={{ my: 3 }}>
-                  <Divider sx={{ borderWidth: 1, borderColor: 'white' }} />
-                </Grid>
-                <Grid item xs={6}>
-                  <Typography variant="body1" sx={{ fontSize: 14 }}>
-                    내가 원하는 회사
-                  </Typography>
-                </Grid>
-                <Grid item xs={6} sx={{ textAlign: 'right' }}>
-                  <Typography variant="body1" sx={{ fontSize: 14 }}>
-                    182 / 200
-                  </Typography>
-                </Grid>
-                <Grid item xs={12} sx={{ textAlign: 'center', my: 1 }}>
-                  <LinearProgress
-                    variant="determinate"
-                    value={60}
-                    color="error"
-                    sx={{
-                      height: 20,
-                      borderRadius: 5,
-                      backgroundColor: alpha('#B4B4B4', 0.2),
-                    }}
-                  />
-                </Grid>
-                <Grid item xs={6}>
-                  <Typography variant="body1" sx={{ fontSize: 10 }}>
-                    유연하지 않음
-                  </Typography>
-                </Grid>
-                <Grid item xs={6} sx={{ textAlign: 'right' }}>
-                  <Typography variant="body1" sx={{ fontSize: 10 }}>
-                    유연함
-                  </Typography>
-                </Grid>
-              </Grid>
-            </Card>
-          </Grid>
-          {/* 성장 가능성 */}
-          <Grid item xs={12} sx={{ mt: 3 }}>
-            <Typography sx={{ ml: '10%', width: '80%' }} variant="h6">
-              성장 가능성 비교하기
-            </Typography>
-          </Grid>
-          <Grid item xs={12}>
-            <Typography
-              sx={{ ml: '10%', width: '80%', fontSize: 12, mt: -2 }}
-              variant="body2"
-            >
-              현 회사의 성장가능성과 내가 원하는 회사를 비교해 보여줘요
-            </Typography>
-          </Grid>
-          <Grid item xs={12} sx={{ mt: -2 }}>
-            <Card
-              sx={{
-                p: 3,
-                width: '80%',
-                ml: '10%',
+                width: '90%',
                 backgroundColor: alpha('#B8DDFF', 0.2),
                 boxShadow: 'none',
                 borderRadius: 3,
               }}
             >
               <Grid container>
-                <Grid item xs={6}>
-                  <Typography variant="body1" sx={{ fontSize: 14 }}>
-                    주식회사 카카오
+                <Grid item xs={12}>
+                  <Typography variant="h6">업무 강도</Typography>
+                </Grid>
+                <Grid item xs={12} sx={{ mt: 2 }}>
+                  <Typography variant="body2" sx={{ fontSize: 10 }}>
+                    우리 회사
                   </Typography>
                 </Grid>
-                <Grid item xs={6} sx={{ textAlign: 'right' }}>
-                  <Typography variant="body1" sx={{ fontSize: 14 }}>
-                    182 / 200
-                  </Typography>
+                <Grid item xs={12}>
+                  <Typography variant="h6">72/180</Typography>
                 </Grid>
-                <Grid item xs={12} sx={{ textAlign: 'center', my: 1 }}>
-                  <LinearProgress
-                    variant="determinate"
-                    value={60}
-                    color="error"
-                    sx={{
-                      height: 20,
-                      borderRadius: 5,
-                      backgroundColor: alpha('#B4B4B4', 0.2),
-                    }}
-                  />
-                </Grid>
-                <Grid item xs={6}>
-                  <Typography variant="body1" sx={{ fontSize: 10 }}>
-                    성장 가능성 낮음
-                  </Typography>
-                </Grid>
-                <Grid item xs={6} sx={{ textAlign: 'right' }}>
-                  <Typography variant="body1" sx={{ fontSize: 10 }}>
-                    성장 가능성 높음
-                  </Typography>
-                </Grid>
-                <Grid item xs={12} sx={{ my: 3 }}>
-                  <Divider sx={{ borderWidth: 1, borderColor: 'white' }} />
-                </Grid>
-                <Grid item xs={6}>
-                  <Typography variant="body1" sx={{ fontSize: 14 }}>
+                <Grid item xs={12} sx={{ mt: 2 }}>
+                  <Typography variant="body2" sx={{ fontSize: 10 }}>
                     내가 원하는 회사
                   </Typography>
                 </Grid>
-                <Grid item xs={6} sx={{ textAlign: 'right' }}>
-                  <Typography variant="body1" sx={{ fontSize: 14 }}>
-                    182 / 200
-                  </Typography>
+                <Grid item xs={9}>
+                  <Typography variant="h6">123/180</Typography>
                 </Grid>
-                <Grid item xs={12} sx={{ textAlign: 'center', my: 1 }}>
-                  <LinearProgress
-                    variant="determinate"
-                    value={60}
-                    color="error"
-                    sx={{
-                      height: 20,
-                      borderRadius: 5,
-                      backgroundColor: alpha('#B4B4B4', 0.2),
-                    }}
-                  />
-                </Grid>
-                <Grid item xs={6}>
-                  <Typography variant="body1" sx={{ fontSize: 10 }}>
-                    성장 가능성 낮음
-                  </Typography>
-                </Grid>
-                <Grid item xs={6} sx={{ textAlign: 'right' }}>
-                  <Typography variant="body1" sx={{ fontSize: 10 }}>
-                    성장 가능성 높음
-                  </Typography>
-                </Grid>
-              </Grid>
-            </Card>
-          </Grid>
-          <Grid item xs={12} sx={{ mt: 3 }}>
-            <Typography sx={{ ml: '10%', width: '80%' }} variant="h6">
-              결과가 마음에 드시나요?
-            </Typography>
-          </Grid>
-          <Grid item xs={12}>
-            <Typography
-              sx={{ ml: '10%', width: '80%', fontSize: 12, mt: -2 }}
-              variant="body2"
-            >
-              결과를 평가해주시면 잡스코어의 성장에 큰 도움이 됩니다 :)
-            </Typography>
-          </Grid>
-          <Grid item xs={12} sx={{ mt: -2 }}>
-            <Card
-              sx={{
-                p: 3,
-                width: '80%',
-                ml: '10%',
-                backgroundColor: alpha('#FFECA9', 0.2),
-                boxShadow: 'none',
-                borderRadius: 3,
-              }}
-            >
-              <Grid container>
-                <Grid item xs={2.4} sx={{ textAlign: 'center' }}>
-                  <img src="/review/1.png" />
-                </Grid>
-                <Grid item xs={2.4} sx={{ textAlign: 'center' }}>
-                  <img src="/review/2.png" />
-                </Grid>
-                <Grid item xs={2.4} sx={{ textAlign: 'center' }}>
-                  <img src="/review/3.png" />
-                </Grid>
-                <Grid item xs={2.4} sx={{ textAlign: 'center' }}>
-                  <img src="/review/4.png" />
-                </Grid>
-                <Grid item xs={2.4} sx={{ textAlign: 'center' }}>
-                  <img src="/review/5.png" />
-                </Grid>
-                <Grid item xs={2.4} sx={{ textAlign: 'center' }}>
-                  <Typography variant="body2" sx={{ fontSize: 10 }}>
-                    Nice
-                  </Typography>
-                </Grid>
-                <Grid item xs={2.4} sx={{ textAlign: 'center' }}>
-                  <Typography variant="body2" sx={{ fontSize: 10 }}>
-                    Good
-                  </Typography>
-                </Grid>
-                <Grid item xs={2.4} sx={{ textAlign: 'center' }}>
-                  <Typography variant="body2" sx={{ fontSize: 10 }}>
-                    Fine
-                  </Typography>
-                </Grid>
-                <Grid item xs={2.4} sx={{ textAlign: 'center' }}>
-                  <Typography variant="body2" sx={{ fontSize: 10 }}>
-                    So-So
-                  </Typography>
-                </Grid>
-                <Grid item xs={2.4} sx={{ textAlign: 'center' }}>
-                  <Typography variant="body2" sx={{ fontSize: 10 }}>
-                    Bad
-                  </Typography>
+                <Grid item xs={3}>
+                  <img src="/review/num.png" />
                 </Grid>
               </Grid>
             </Card>
@@ -686,7 +620,6 @@ const ResultPageView = () => {
               재미있는건 같이 봐야죠! 친구들에게 공유해 보세요!
             </Typography>
           </Grid>
-
           <Grid item xs={12} sx={{ mt: -2 }}>
             <Card
               sx={{
