@@ -22,6 +22,17 @@ export interface Answer {
   point: number
 }
 
+export interface CompanyType {
+  id: string
+  name: string
+  url: string
+}
+
+export interface SaveCompanyType {
+  name: string
+  url: string
+}
+
 export interface Department {
   name: string
   id: number
