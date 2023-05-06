@@ -21,3 +21,10 @@ export interface Answer {
   text: string
   point: number
 }
+
+export interface Department {
+  name: string
+  id: number
+  size: number
+  type: boolean
+}

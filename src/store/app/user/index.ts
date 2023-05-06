@@ -5,6 +5,7 @@ interface UserType {
   company: {
     id: string
     name: string
+    department: string
   }
   score: {
     type1: number
@@ -22,6 +23,7 @@ const initialState: UserType = {
   company: {
     id: '',
     name: '',
+    department: '',
   },
   score: {
     type1: 0,
@@ -44,10 +46,13 @@ export const userSlice = createSlice({
         ...payload,
       }
     },
+    updateDepartment: (state, { payload }) => {
+      state.company.department = payload.department
+    },
   },
   extraReducers: (builder) => {},
 })
 
 export default userSlice.reducer
 
-export const { updateCompany } = userSlice.actions
+export const { updateCompany, updateDepartment } = userSlice.actions

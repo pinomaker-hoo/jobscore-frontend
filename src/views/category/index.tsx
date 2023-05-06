@@ -1,20 +1,13 @@
 // ** Next Imports
 import Link from 'next/link'
 
-// ** React Imports
-import { useState } from 'react'
-
 // ** Mui Imports
 import { Button, Grid, Typography } from '@mui/material'
 
-interface Category {
-  name: string
-  id: number
-  size: number
-  type: boolean
-}
+// ** Type Imports
+import { Department } from '@/types'
 
-const defaultCategory: Category[] = [
+const departmentList: Department[] = [
   { type: false, id: 1, name: '경영 & 기획', size: 4 },
   { type: false, id: 2, name: '디자인', size: 3 },
   { type: false, id: 3, name: '재무 & 회계', size: 4 },
@@ -33,22 +26,17 @@ const defaultCategory: Category[] = [
   { type: false, id: 16, name: '비공개', size: 3 },
 ]
 
-const CategoryPageView = () => {
-  const [category, setCategory] = useState<Category[]>(defaultCategory)
+interface Props {
+  department: string
+  handleBtnClick: (department: string) => void
+  handleNext: () => void
+}
 
-  const onClick = (id: number) => {
-    const newCategory = category.map((item) => {
-      if (item.id === id) {
-        return {
-          ...item,
-          type: item.type ? false : true,
-        }
-      }
-      return item
-    })
-    setCategory(newCategory)
-  }
-
+const CategoryPageView = ({
+  handleBtnClick,
+  department,
+  handleNext,
+}: Props) => {
   return (
     <Grid container spacing={3}>
       <Grid item xs={3} sx={{ mt: 3, ml: 3 }}>
@@ -70,12 +58,12 @@ const CategoryPageView = () => {
       </Grid>
       <Grid item xs={12} sx={{ ml: 3 }}>
         <Grid container spacing={1.5}>
-          {category.map((item: Category) => (
+          {departmentList.map((item: Department) => (
             <Grid item xs={item.size} key={item.id}>
               <Button
-                variant={item.type ? 'contained' : 'outlined'}
+                variant={item.name === department ? 'contained' : 'outlined'}
                 fullWidth
-                onClick={() => onClick(item.id)}
+                onClick={() => handleBtnClick(item.name)}
                 sx={{ height: 40 }}
               >
                 {item.name}
@@ -85,11 +73,15 @@ const CategoryPageView = () => {
         </Grid>
       </Grid>
       <Grid item xs={12} sx={{ textAlign: 'center', mt: 1.5 }}>
-        <Link href="/select/intro">
-          <Button variant="contained" size="large" sx={{ width: '80%' }}>
-            다음
-          </Button>
-        </Link>
+        <Button
+          variant="contained"
+          size="large"
+          sx={{ width: '80%' }}
+          disabled={department === '' ? true : false}
+          onClick={handleNext}
+        >
+          다음
+        </Button>
       </Grid>
     </Grid>
   )

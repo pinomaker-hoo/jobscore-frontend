@@ -33,7 +33,7 @@ const CompanyPage = () => {
   }
 
   const handleNext = () => {
-    dispatch(updateCompany(company))
+    dispatch(updateCompany({ ...company, department: '' }))
 
     router.push('/category')
   }
