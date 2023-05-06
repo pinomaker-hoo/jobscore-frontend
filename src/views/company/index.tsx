@@ -4,7 +4,19 @@ import Link from 'next/link'
 // ** Mui Imports
 import { Button, Grid, Switch, Typography, TextField } from '@mui/material'
 
-const CompanyPageView = () => {
+interface Props {
+  name: string
+  checked: boolean
+  handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+  handleNext: () => void
+}
+
+const CompanyPageView = ({
+  name,
+  handleChange,
+  checked,
+  handleNext,
+}: Props) => {
   return (
     <Grid container spacing={3}>
       <Grid item xs={3} sx={{ mt: 3, ml: 3 }}>
@@ -32,6 +44,8 @@ const CompanyPageView = () => {
             variant="standard"
             sx={{ width: '90%' }}
             placeholder="ex) 구글 코리아"
+            disabled
+            value={name}
           />
         </Link>
       </Grid>
@@ -42,14 +56,18 @@ const CompanyPageView = () => {
         </Typography>
       </Grid>
       <Grid item xs={3} sx={{ textAlign: 'right', pr: 3, mb: 20 }}>
-        <Switch />
+        <Switch onChange={handleChange} value={checked} />
       </Grid>
       <Grid item xs={12} sx={{ textAlign: 'center', mt: 2.8 }}>
-        <Link href="/category">
-          <Button variant="contained" size="large" sx={{ width: '80%' }}>
-            다음
-          </Button>
-        </Link>
+        <Button
+          variant="contained"
+          size="large"
+          sx={{ width: '80%' }}
+          disabled={name === '' ? true : false}
+          onClick={handleNext}
+        >
+          다음
+        </Button>
       </Grid>
     </Grid>
   )

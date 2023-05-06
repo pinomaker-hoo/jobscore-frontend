@@ -51,15 +51,20 @@ const CompanySearchView = () => {
         </Paper>
       </Grid>
       <Grid item xs={12}>
-        {trash.map((item: any) => (
-          <Grid container sx={{ mt: 1 }}>
+        {trash.map((item: any, index: number) => (
+          <Grid container sx={{ mt: 1 }} key={index}>
             <Grid item xs={3} sx={{ textAlign: 'center' }}>
               <img src={item.img ? item.img : '/search/company.png'} />
             </Grid>
             <Grid item xs={9}>
-              <Typography variant="body1" sx={{ color: 'black' }}>
-                {item.name}
-              </Typography>
+              <Link
+                href={`/company?id=${item.uid}&name=${item.name}`}
+                style={{ textDecoration: 'none' }}
+              >
+                <Typography variant="body1" sx={{ color: 'black' }}>
+                  {item.name}
+                </Typography>
+              </Link>
             </Grid>
           </Grid>
         ))}
@@ -80,9 +85,9 @@ const CompanySearchView = () => {
 export default CompanySearchView
 
 const trash = [
-  { id: 0, name: 'Google' },
-  { id: 1, name: 'Kakao' },
-  { id: 2, name: 'Naver' },
-  { id: 3, name: 'FaceBook' },
-  { id: 4, name: 'amazon' },
+  { uid: '01231231', name: 'Google' },
+  { uid: '01231232', name: 'Kakao' },
+  { uid: '01231233', name: 'Naver' },
+  { uid: '01231234', name: 'FaceBook' },
+  { uid: '01231235', name: 'amazon' },
 ]
