@@ -47,3 +47,9 @@ export interface SelectPoint {
   type4: number
 }
 
+export interface SelectWantPoint {
+  type5: number
+  type6: number
+  type7: number
+  type8: number
+}
