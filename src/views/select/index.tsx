@@ -5,7 +5,15 @@ import { Button, Card, Grid, Typography } from '@mui/material'
 import Lottie from 'react-lottie'
 import mainLottie from '@/lotties/select.json'
 
-const SelectPageView = () => {
+// ** Fake DB Imports
+import { questionData1 } from '@/@fake'
+
+interface Props {
+  count: number
+  handleChange: (type: string, point: number) => void
+}
+
+const SelectPageView = ({ count, handleChange }: Props) => {
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -15,6 +23,8 @@ const SelectPageView = () => {
     },
   }
 
+  const selectData = [...questionData1]
+
   return (
     <Grid container sx={{ backgroundColor: '#629DD7', height: '100%' }}>
       <Grid item xs={3} sx={{ pl: 3, pt: 3 }}>
@@ -22,7 +32,7 @@ const SelectPageView = () => {
       </Grid>
       <Grid item xs={9} sx={{ textAlign: 'right', pr: 3, pt: 3 }}>
         <Typography variant="h6" sx={{ color: 'white' }}>
-          1/40
+          {count + 1} / 40
         </Typography>
       </Grid>
       <Grid item xs={12} sx={{ textAlign: 'center', mt: -5, mb: -5 }}>
@@ -49,66 +59,33 @@ const SelectPageView = () => {
                 }}
               >
                 <Typography variant="body2">
-                  받고있는 급여대비 업무량은 어느 정도 인가요?
+                  {selectData[count].question}
                 </Typography>
               </Card>
             </Grid>
-            <Grid item xs={12} sx={{ mt: 5 }}>
-              <Button
-                size="large"
-                variant="outlined"
-                fullWidth
-                sx={{
-                  borderRadius: 2,
-                  borderColor: '#123F6C',
-                  color: 'black',
-                }}
-              >
-                정시 출/퇴근 근무
-              </Button>
-            </Grid>
-            <Grid item xs={12} sx={{ mt: 2 }}>
-              <Button
-                size="large"
-                variant="outlined"
-                fullWidth
-                sx={{
-                  borderRadius: 2,
-                  borderColor: '#123F6C',
-                  color: 'black',
-                }}
-              >
-                일부 재택 근무
-              </Button>
-            </Grid>
-            <Grid item xs={12} sx={{ mt: 2 }}>
-              <Button
-                size="large"
-                variant="outlined"
-                fullWidth
-                sx={{
-                  borderRadius: 2,
-                  borderColor: '#123F6C',
-                  color: 'black',
-                }}
-              >
-                탄력 근무제
-              </Button>
-            </Grid>
-            <Grid item xs={12} sx={{ mt: 2 }}>
-              <Button
-                size="large"
-                variant="outlined"
-                fullWidth
-                sx={{
-                  borderRadius: 2,
-                  borderColor: '#123F6C',
-                  color: 'black',
-                }}
-              >
-                완전 자율 근무제
-              </Button>
-            </Grid>
+            {selectData[count].answer.map((item) => (
+              <Grid item xs={12} sx={{ mt: 2 }} key={item.id}>
+                <Button
+                  size="large"
+                  variant="outlined"
+                  fullWidth
+                  sx={{
+                    borderRadius: 2,
+                    borderColor: '#123F6C',
+                    color: 'black',
+                  }}
+                  onClick={() =>
+                    handleChange(
+                      `type${selectData[count].categoryId}`,
+                      item.point
+                    )
+                  }
+                >
+                  {item.text}
+                </Button>
+              </Grid>
+            ))}
+
             <Grid item xs={12} sx={{ height: 30 }} />
           </Grid>
         </Card>

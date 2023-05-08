@@ -39,3 +39,11 @@ export interface Department {
   size: number
   type: boolean
 }
+
+export interface SelectPoint {
+  type1: number
+  type2: number
+  type3: number
+  type4: number
+}
+

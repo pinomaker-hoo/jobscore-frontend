@@ -49,10 +49,17 @@ export const userSlice = createSlice({
     updateDepartment: (state, { payload }) => {
       state.company.department = payload.department
     },
+    updateSelectScore: (state, { payload }) => {
+      state.score = {
+        ...state.score,
+        ...payload,
+      }
+    },
   },
   extraReducers: (builder) => {},
 })
 
 export default userSlice.reducer
 
-export const { updateCompany, updateDepartment } = userSlice.actions
+export const { updateCompany, updateDepartment, updateSelectScore } =
+  userSlice.actions
