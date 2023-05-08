@@ -11,6 +11,7 @@ import {
 
 // ** Other View Imports
 import WalkingDuck from '@/components/duck/walkingDuck'
+import Link from 'next/link'
 
 const ResultPageView = () => {
   return (
@@ -658,20 +659,24 @@ const ResultPageView = () => {
             </Button>
           </Grid>
           <Grid item xs={12} sx={{ textAlign: 'center', my: -1 }}>
-            <Button
-              variant="contained"
-              sx={{ width: '80%', backgroundColor: '#6176FF' }}
-            >
-              다른 회사 잡스코어 점수 보기
-            </Button>
+            <Link href="/rank">
+              <Button
+                variant="contained"
+                sx={{ width: '80%', backgroundColor: '#6176FF' }}
+              >
+                다른 회사 잡스코어 점수 보기
+              </Button>
+            </Link>
           </Grid>
           <Grid item xs={12} sx={{ textAlign: 'center' }}>
-            <Button
-              variant="contained"
-              sx={{ width: '80%', backgroundColor: '#6176FF' }}
-            >
-              다시 테스트 하러 가기
-            </Button>
+            <Link href="/">
+              <Button
+                variant="contained"
+                sx={{ width: '80%', backgroundColor: '#6176FF' }}
+              >
+                다시 테스트 하러 가기
+              </Button>
+            </Link>
           </Grid>
           <Grid item xs={12} sx={{ textAlign: 'center', mb: 5 }}>
             <Typography variant="h1" sx={{ fontSize: 12 }}>
