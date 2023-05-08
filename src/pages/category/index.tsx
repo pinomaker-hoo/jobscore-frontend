@@ -22,7 +22,8 @@ const CategoryPage = () => {
   }
 
   const handleNext = () => {
-    dispatch(updateDepartment(department))
+    console.log(department)
+    dispatch(updateDepartment({ department }))
     router.push('/select/intro')
   }
 

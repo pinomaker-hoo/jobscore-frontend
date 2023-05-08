@@ -47,7 +47,7 @@ export const userSlice = createSlice({
       }
     },
     updateDepartment: (state, { payload }) => {
-      state.company.department = payload.department
+      state.company = { ...state.company, ...payload }
     },
     updateSelectScore: (state, { payload }) => {
       state.score = {
