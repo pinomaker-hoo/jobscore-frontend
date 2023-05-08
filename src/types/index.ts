@@ -40,14 +40,16 @@ export interface Department {
   type: boolean
 }
 
-export interface SelectPoint {
+export type SelectPoint = {
+  [key: string]: number
   type1: number
   type2: number
   type3: number
   type4: number
 }
 
-export interface SelectWantPoint {
+export type SelectWantPoint = {
+  [key: string]: number
   type5: number
   type6: number
   type7: number

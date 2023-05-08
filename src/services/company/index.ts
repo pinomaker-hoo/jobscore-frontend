@@ -10,13 +10,13 @@ import {
 } from 'firebase/firestore'
 
 // ** Type Imports
-import { SaveCompanyType } from '@/types'
+import { CompanyType, SaveCompanyType } from '@/types'
 
 const companyApi = {
   saveCompany: async (company: SaveCompanyType) => {
     await setDoc(doc(collection(db, 'company')), company)
   },
-  findAllCompany: async (name: string) => {
+  findAllCompany: async (name: string): Promise<CompanyType[]> => {
     const querySnapshot = await getDocs(
       query(
         collection(db, 'company'),
@@ -24,9 +24,11 @@ const companyApi = {
         where('name', '<', name + '\uf8ff')
       )
     )
+
     return querySnapshot.docs.map((item) => ({
       id: item.id,
-      ...item.data(),
+      name: item.data().name,
+      url: item.data().url,
     }))
   },
 }
