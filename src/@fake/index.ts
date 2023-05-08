@@ -12,7 +12,7 @@ const categryData: Category[] = [
   { id: 8, title: '원하는 회사의 성장 가능성   ', type: Company.WANT },
 ]
 
-export const questionData: Question[] = [
+export const questionData1: Question[] = [
   {
     id: 1,
     question: '현재 받는 급여대비 업무량은 어느 정도 인가요?',
@@ -553,6 +553,9 @@ export const questionData: Question[] = [
       },
     ],
   },
+]
+
+export const questionData2: Question[] = [
   {
     id: 21,
     question: '급여 대비 업무량은 어느 정도가 괜찮을 것 같나요?',
