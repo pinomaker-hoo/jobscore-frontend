@@ -52,7 +52,7 @@ const CompanyPageView = ({
       <Grid item xs={7} />
       <Grid item xs={2} sx={{ textAlign: 'right' }}>
         <Typography variant="body2" sx={{ py: 1 }}>
-          공개
+          {checked ? '비공개' : '공개'}
         </Typography>
       </Grid>
       <Grid item xs={3} sx={{ textAlign: 'right', pr: 3, mb: 20 }}>
