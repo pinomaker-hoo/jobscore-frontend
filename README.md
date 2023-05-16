@@ -5,6 +5,9 @@
 ### Run
 
 ```
+git clone
+cd jobscore-frontend
+npm install
 npm run dev
 ```
 
