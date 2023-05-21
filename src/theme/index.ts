@@ -11,6 +11,16 @@ const theme = createTheme({
     },
   },
   components: {
+    MuiLinearProgress: {
+      styleOverrides: {
+        root: {
+          '& .MuiLinearProgress-bar': {
+            backgroundImage: 'linear-gradient(to right, #FF0000 70%, #6EB9FF)',
+            backgroundClip: 'content-box',
+          },
+        },
+      },
+    },
     MuiButton: {
       defaultProps: {
         disableElevation: true,

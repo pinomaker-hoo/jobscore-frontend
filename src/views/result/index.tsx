@@ -1,4 +1,7 @@
-import DounetChart from '@/components/chart/dounetChart'
+// ** Next Imports
+import Link from 'next/link'
+
+// ** Mui Imports
 import {
   Grid,
   alpha,
@@ -11,7 +14,7 @@ import {
 
 // ** Other View Imports
 import WalkingDuck from '@/components/duck/walkingDuck'
-import Link from 'next/link'
+import DounetChart from '@/components/chart/dounetChart'
 
 const ResultPageView = () => {
   return (
@@ -41,8 +44,8 @@ const ResultPageView = () => {
                     우리 회사 잡스코어
                   </Typography>
                 </Grid>
-                <Grid item xs={12} sx={{ textAlign: 'center' }}>
-                  <DounetChart height={300} series={60} />
+                <Grid item xs={12} sx={{ textAlign: 'center', mb: -5 }}>
+                  <DounetChart />
                 </Grid>
                 <Grid item xs={12}>
                   <Divider
@@ -78,7 +81,7 @@ const ResultPageView = () => {
                   </Typography>
                 </Grid>
                 <Grid item xs={12} sx={{ textAlign: 'center', mt: 2 }}>
-                  <img src="/type/type1.png" style={{ width: '70%' }} />
+                  <img src="/type/type1.png" style={{ width: '90%' }} />
                 </Grid>
                 <Grid item xs={12} sx={{ textAlign: 'center', mt: 2 }}>
                   <Typography
@@ -109,10 +112,10 @@ const ResultPageView = () => {
                 <Grid item xs={12} sx={{ textAlign: 'center', my: 1 }}>
                   <LinearProgress
                     variant="determinate"
-                    value={60}
+                    value={30}
                     color="error"
                     sx={{
-                      height: 20,
+                      height: 14,
                       borderRadius: 5,
                       backgroundColor: alpha('#B4B4B4', 0.2),
                     }}
@@ -147,7 +150,7 @@ const ResultPageView = () => {
                     value={60}
                     color="error"
                     sx={{
-                      height: 20,
+                      height: 14,
                       borderRadius: 5,
                       backgroundColor: alpha('#B4B4B4', 0.2),
                     }}
@@ -182,7 +185,7 @@ const ResultPageView = () => {
                     value={60}
                     color="error"
                     sx={{
-                      height: 20,
+                      height: 14,
                       borderRadius: 5,
                       backgroundColor: alpha('#B4B4B4', 0.2),
                     }}
@@ -217,7 +220,7 @@ const ResultPageView = () => {
                     value={60}
                     color="error"
                     sx={{
-                      height: 20,
+                      height: 14,
                       borderRadius: 5,
                       backgroundColor: alpha('#B4B4B4', 0.2),
                     }}
@@ -253,8 +256,8 @@ const ResultPageView = () => {
                     내가 원하는 회사 잡스코어
                   </Typography>
                 </Grid>
-                <Grid item xs={12} sx={{ textAlign: 'center' }}>
-                  <DounetChart height={300} series={60} />
+                <Grid item xs={12} sx={{ textAlign: 'center', mb: -5 }}>
+                  <DounetChart />
                 </Grid>
                 <Grid item xs={12}>
                   <Divider
@@ -290,7 +293,7 @@ const ResultPageView = () => {
                   </Typography>
                 </Grid>
                 <Grid item xs={12} sx={{ textAlign: 'center', mt: 2 }}>
-                  <img src="/type/type2.png" style={{ width: '70%' }} />
+                  <img src="/type/type2.png" style={{ width: '90%' }} />
                 </Grid>
                 <Grid item xs={12} sx={{ textAlign: 'center', mt: 2 }}>
                   <Typography
@@ -324,7 +327,7 @@ const ResultPageView = () => {
                     value={60}
                     color="error"
                     sx={{
-                      height: 20,
+                      height: 14,
                       borderRadius: 5,
                       backgroundColor: alpha('#B4B4B4', 0.2),
                     }}
@@ -359,7 +362,7 @@ const ResultPageView = () => {
                     value={60}
                     color="error"
                     sx={{
-                      height: 20,
+                      height: 14,
                       borderRadius: 5,
                       backgroundColor: alpha('#B4B4B4', 0.2),
                     }}
@@ -394,7 +397,7 @@ const ResultPageView = () => {
                     value={60}
                     color="error"
                     sx={{
-                      height: 20,
+                      height: 14,
                       borderRadius: 5,
                       backgroundColor: alpha('#B4B4B4', 0.2),
                     }}
@@ -429,7 +432,7 @@ const ResultPageView = () => {
                     value={60}
                     color="error"
                     sx={{
-                      height: 20,
+                      height: 14,
                       borderRadius: 5,
                       backgroundColor: alpha('#B4B4B4', 0.2),
                     }}
