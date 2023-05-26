@@ -8,32 +8,32 @@ import { useState } from 'react'
 import SelectWantPageView from '@/views/selectWant'
 
 // ** Type Imports
-import { SelectWantPoint } from '@/types'
+import { SelectPoint } from '@/types'
 
 // ** Redux Imports
 import { useDispatch } from 'react-redux'
-import { updateSelectScore } from '@/store/app/user'
+import { updateWantCompanyScore } from '@/store/app/user'
 
 const SelectWantPage = () => {
   const router = useRouter()
   const dispatch = useDispatch()
 
-  const [point, setPoint] = useState<SelectWantPoint>({
-    type5: 0,
-    type6: 0,
-    type7: 0,
-    type8: 0,
+  const [point, setPoint] = useState<SelectPoint>({
+    type1: 0,
+    type2: 0,
+    type3: 0,
+    type4: 0,
   })
   const [count, setCount] = useState<number>(0)
 
   const handleChange = (type: string, number: number) => {
     if (count === 19) {
-      dispatch(updateSelectScore(point))
+      dispatch(updateWantCompanyScore(point))
       router.push('/endLoading')
 
       return
     }
-    setPoint((cur: SelectWantPoint) => ({ ...cur, [type]: cur[type] + number }))
+    setPoint((cur: SelectPoint) => ({ ...cur, [type]: cur[type] + number }))
     setCount((cur) => cur + 1)
   }
 

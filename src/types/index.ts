@@ -48,14 +48,6 @@ export type SelectPoint = {
   type4: number
 }
 
-export type SelectWantPoint = {
-  [key: string]: number
-  type5: number
-  type6: number
-  type7: number
-  type8: number
-}
-
 export interface companyType {
   id: number
   code: string

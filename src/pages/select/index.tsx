@@ -12,7 +12,7 @@ import { SelectPoint } from '@/types'
 
 // ** Redux Imports
 import { useDispatch } from 'react-redux'
-import { updateSelectScore } from '@/store/app/user'
+import { updateMyCompanyScore } from '@/store/app/user'
 
 const SelectPage = () => {
   const router = useRouter()
@@ -28,7 +28,7 @@ const SelectPage = () => {
 
   const handleChange = (type: string, number: number) => {
     if (count === 19) {
-      dispatch(updateSelectScore(point))
+      dispatch(updateMyCompanyScore(point))
       router.push('/selectWant/intro')
 
       return

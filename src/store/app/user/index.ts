@@ -8,14 +8,19 @@ interface UserType {
     department: string
   }
   score: {
-    type1: number
-    type2: number
-    type3: number
-    type4: number
-    type5: number
-    type6: number
-    type7: number
-    type8: number
+    myCompany: {
+      type1: number
+      type2: number
+      type3: number
+      type4: number
+    }
+
+    wantCompany: {
+      type1: number
+      type2: number
+      type3: number
+      type4: number
+    }
   }
 }
 
@@ -26,14 +31,18 @@ const initialState: UserType = {
     department: '',
   },
   score: {
-    type1: 0,
-    type2: 0,
-    type3: 0,
-    type4: 0,
-    type5: 0,
-    type6: 0,
-    type7: 0,
-    type8: 0,
+    myCompany: {
+      type1: 0,
+      type2: 0,
+      type3: 0,
+      type4: 0,
+    },
+    wantCompany: {
+      type1: 0,
+      type2: 0,
+      type3: 0,
+      type4: 0,
+    },
   },
 }
 
@@ -49,9 +58,15 @@ export const userSlice = createSlice({
     updateDepartment: (state, { payload }) => {
       state.company = { ...state.company, ...payload }
     },
-    updateSelectScore: (state, { payload }) => {
-      state.score = {
-        ...state.score,
+    updateMyCompanyScore: (state, { payload }) => {
+      state.score.myCompany = {
+        ...state.score.myCompany,
+        ...payload,
+      }
+    },
+    updateWantCompanyScore: (state, { payload }) => {
+      state.score.wantCompany = {
+        ...state.score.wantCompany,
         ...payload,
       }
     },
@@ -61,5 +76,9 @@ export const userSlice = createSlice({
 
 export default userSlice.reducer
 
-export const { updateCompany, updateDepartment, updateSelectScore } =
-  userSlice.actions
+export const {
+  updateCompany,
+  updateDepartment,
+  updateMyCompanyScore,
+  updateWantCompanyScore,
+} = userSlice.actions
