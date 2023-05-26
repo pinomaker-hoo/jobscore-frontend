@@ -55,3 +55,11 @@ export type SelectWantPoint = {
   type7: number
   type8: number
 }
+
+export interface companyType {
+  id: number
+  code: string
+  title: string
+  text: string
+  img: string
+}

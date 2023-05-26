@@ -1,5 +1,5 @@
 // ** Type Imports
-import { Category, Company, Question } from '@/types'
+import { Category, Company, Question, companyType } from '@/types'
 
 const categryData: Category[] = [
   { id: 1, title: '현재 회사의 업무 강도', type: Company.MY },
@@ -1095,5 +1095,120 @@ export const questionData2: Question[] = [
         point: 36,
       },
     ],
+  },
+]
+
+export const companyTypeData: companyType[] = [
+  {
+    id: 1,
+    code: '0000',
+    title: '시한폭탄',
+    text: '언제 터질지 몰라요. 보글보글 보글보글',
+    img: '/type/0000.png',
+  },
+  {
+    id: 2,
+    code: '0001',
+    title: '반지하 스타트업',
+    text: '1년만 버텨요.. 배워갈건 많을거예요',
+    img: '/type/0001.png',
+  },
+  {
+    id: 3,
+    code: '1111',
+    title: '지상낙원',
+    text: '몸과 마음 다 여유로운 회사 생활이 될 수 있겠어요.',
+    img: '/type/1111.png',
+  },
+  {
+    id: 4,
+    code: '0111',
+    title: '애자일 스타트업',
+    text: '업무 강도가 높아도 좋은 업무 환경을 제공해줄 수 있는 곳',
+    img: '/type/0111.png',
+  },
+  {
+    id: 5,
+    code: '1011',
+    title: '타임피스',
+    text: '근태만 확실하면 꿈의 기업',
+    img: '/type/1011.png',
+  },
+  {
+    id: 6,
+    code: '1001',
+    title: '느긋한 일개미',
+    text: '느릴 순 있지만, 꾸준한 노력으로 성장 할 수 있는 곳',
+    img: '/type/1001.png',
+  },
+  {
+    id: 7,
+    code: '1000',
+    title: '물경력 물레바퀴',
+    text: '하루종일 퇴근만 기다리는 돌고 도는 내 인생',
+    img: '/type/1000.png',
+  },
+  {
+    id: 8,
+    code: '0000',
+    title: '시한폭탄',
+    text: '언제 터질지 몰라요. 보글보글 보글보글',
+    img: '/type/0000.png',
+  },
+  {
+    id: 9,
+    code: '0100',
+    title: '가진게 자유뿐',
+    text: '출퇴근이 자유로우면 뭐해.. 다른건...',
+    img: '/type/0100.png',
+  },
+  {
+    id: 10,
+    code: '0010',
+    title: '사람만 좋아',
+    text: '괜찮아요. 그래도 잘 챙겨주긴 해요.',
+    img: '/type/0010.png',
+  },
+  {
+    id: 11,
+    code: '1010',
+    title: '해변의 모래성',
+    text: '겉으로 보기엔 화려해 보여도 순간 사라질 수 있으니 조심!',
+    img: '/type/1010.png',
+  },
+  {
+    id: 12,
+    code: '0101',
+    title: '달려라 하니',
+    text: '멈추지 말고 열심히 달릴수록 성취감이 쑥쑥',
+    img: '/type/0101.png',
+  },
+  {
+    id: 13,
+    code: '1110',
+    title: '배울건 없어도 몸이 편해',
+    text: '큰 실수만 하지 않는다면 한동안 편하게 다니기 좋은 곳',
+    img: '/type/1110.png',
+  },
+  {
+    id: 14,
+    code: '1101',
+    title: '복지는 Self',
+    text: '이곳의 복지는 Only 자유와 성장!',
+    img: '/type/1010.png',
+  },
+  {
+    id: 15,
+    code: '1100',
+    title: 'YOLO',
+    text: '이곳에 미래란 없다. 오늘 편하면 그만',
+    img: '/type/1100.png',
+  },
+  {
+    id: 16,
+    code: '0110',
+    title: '햄스터 쳇바퀴',
+    text: '당장의 자유와 복지를 위하여~ 무한으로 달리자',
+    img: '/type/0110.png',
   },
 ]
