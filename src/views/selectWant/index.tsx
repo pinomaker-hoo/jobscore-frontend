@@ -25,8 +25,6 @@ const SelectWantPageView = ({ count, handleChange }: Props) => {
 
   const selectData = [...questionData2]
 
-  console.log(selectData)
-
   return (
     <Grid container sx={{ backgroundColor: '#F4BC00', height: '100%' }}>
       <Grid item xs={3} sx={{ pl: 3, pt: 3 }}>
