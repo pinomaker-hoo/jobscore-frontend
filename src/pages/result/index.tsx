@@ -9,10 +9,14 @@ import { RootState } from '@/store'
 import { useSelector } from 'react-redux'
 
 // ** Other Imports
-import { ResultComapnyType, Result, ScoreType } from '@/types'
+import { ResultComapnyType, Result, ScoreType, TotalScore } from '@/types'
 import { companyTypeData } from '@/@fake'
 
 const ResultPage = () => {
+  const [score, setScore] = useState<TotalScore>({
+    myCompany: 0,
+    wantCompany: 0,
+  })
   const [companyType, setCompanyType] = useState<Result>({
     myCompany: {
       id: 0,
@@ -64,15 +68,29 @@ const ResultPage = () => {
     })
   }
 
+  const getTotalScore = (score: ScoreType) => {
+    return Object.values(score).reduce((cur, ocr) => {
+      return cur + ocr
+    }, 0)
+  }
+
   useEffect(() => {
     if (myCompany) {
       setCompanyType((cur) => ({ ...cur, myCompany: getResultType(myCompany) }))
+      setScore((cur) => ({
+        ...cur,
+        myCompany: getTotalScore({ ...myCompany }),
+      }))
     }
 
     if (wantCompany) {
       setCompanyType((cur) => ({
         ...cur,
         wantCompany: getResultType(wantCompany),
+      }))
+      setScore((cur) => ({
+        ...cur,
+        wantCompany: getTotalScore({ ...wantCompany }),
       }))
     }
   }, [myCompany, wantCompany])
@@ -83,6 +101,7 @@ const ResultPage = () => {
       myCompany={myCompany}
       companyType={companyType}
       handleKakao={handleKakao}
+      score={score}
     />
   )
 }

@@ -67,3 +67,8 @@ export interface ScoreType {
   type3: number
   type4: number
 }
+
+export interface TotalScore {
+  myCompany: number
+  wantCompany: number
+}

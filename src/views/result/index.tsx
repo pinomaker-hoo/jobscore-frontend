@@ -1,6 +1,9 @@
 // ** Next Imports
 import Link from 'next/link'
 
+// ** React Imports
+import { useMemo } from 'react'
+
 // ** Mui Imports
 import {
   Grid,
@@ -17,12 +20,13 @@ import WalkingDuck from '@/components/duck/walkingDuck'
 import DounetChart from '@/components/chart/dounetChart'
 
 // ** Type Imports
-import { Result, ScoreType } from '@/types'
+import { Result, ScoreType, TotalScore } from '@/types'
 
 interface Props {
   companyType: Result
   myCompany: ScoreType
   wantCompany: ScoreType
+  score: TotalScore
   handleKakao: () => void
 }
 
@@ -31,13 +35,8 @@ const ResultPageView = ({
   myCompany,
   wantCompany,
   handleKakao,
+  score,
 }: Props) => {
-  const getTotalScore = (score: ScoreType) => {
-    return Object.values(score).reduce((cur, ocr) => {
-      return cur + ocr
-    }, 0)
-  }
-
   const getTextColor = (a: number, b: number) => {
     if (a > b) return 'blue'
     if (a < b) return 'red'
@@ -72,7 +71,9 @@ const ResultPageView = ({
                   </Typography>
                 </Grid>
                 <Grid item xs={12} sx={{ textAlign: 'center', mb: -5 }}>
-                  <DounetChart data={getTotalScore(myCompany)} state="높음" />
+                  {myCompany && (
+                    <DounetChart data={score.myCompany} state="높음" />
+                  )}
                 </Grid>
                 <Grid item xs={12}>
                   <Divider
@@ -287,7 +288,9 @@ const ResultPageView = ({
                   </Typography>
                 </Grid>
                 <Grid item xs={12} sx={{ textAlign: 'center', mb: -5 }}>
-                  <DounetChart data={getTotalScore(wantCompany)} state="낮음" />
+                  {wantCompany && (
+                    <DounetChart data={score.wantCompany} state="낮음" />
+                  )}
                 </Grid>
                 <Grid item xs={12}>
                   <Divider
