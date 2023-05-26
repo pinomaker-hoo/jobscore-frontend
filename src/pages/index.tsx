@@ -1,6 +1,9 @@
 // ** Next Imports
 import Link from 'next/link'
 
+// ** React Imports
+import { useEffect } from 'react'
+
 // ** Mui Imports
 import { Button, Grid, Typography } from '@mui/material'
 
@@ -11,7 +14,17 @@ import mainLottie from '../lotties/working-person.json'
 // ** Other View Imports
 import WalkingDuck from '@/components/duck/walkingDuck'
 
+// ** Redux Imports
+import { useSelector } from 'react-redux'
+import { RootState } from '@/store'
+import { initialState, initialize } from '@/store/app/user'
+import { useDispatch } from 'react-redux'
+
 const Home = () => {
+  const dispatch = useDispatch()
+
+  const userState = useSelector((state: RootState) => state.user)
+
   const defaultOptions = {
     loop: true,
     autoplay: true,
@@ -20,6 +33,12 @@ const Home = () => {
       preserveAspectRatio: 'xMidYMid slice',
     },
   }
+
+  useEffect(() => {
+    if (userState === initialState) {
+      dispatch(initialize())
+    }
+  }, [userState])
 
   return (
     <Grid container spacing={6}>

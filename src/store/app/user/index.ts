@@ -24,7 +24,7 @@ interface UserType {
   }
 }
 
-const initialState: UserType = {
+export const initialState: UserType = {
   company: {
     id: '',
     name: '',
@@ -50,6 +50,9 @@ export const userSlice = createSlice({
   name: 'user',
   initialState,
   reducers: {
+    initialize: (state) => {
+      state = initialState
+    },
     updateCompany: (state, { payload }) => {
       state.company = {
         ...payload,
@@ -81,4 +84,5 @@ export const {
   updateDepartment,
   updateMyCompanyScore,
   updateWantCompanyScore,
+  initialize,
 } = userSlice.actions
