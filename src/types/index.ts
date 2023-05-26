@@ -48,7 +48,7 @@ export type SelectPoint = {
   type4: number
 }
 
-export interface companyType {
+export interface ResultComapnyType {
   id: number
   code: string
   title: string

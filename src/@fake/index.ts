@@ -1,5 +1,5 @@
 // ** Type Imports
-import { Category, Company, Question, companyType } from '@/types'
+import { Category, Company, Question, ResultComapnyType } from '@/types'
 
 const categryData: Category[] = [
   { id: 1, title: '현재 회사의 업무 강도', type: Company.MY },
@@ -1098,7 +1098,7 @@ export const questionData2: Question[] = [
   },
 ]
 
-export const companyTypeData: companyType[] = [
+export const companyTypeData: ResultComapnyType[] = [
   {
     id: 1,
     code: '0000',
