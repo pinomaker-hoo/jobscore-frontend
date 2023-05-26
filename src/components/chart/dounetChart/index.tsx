@@ -8,7 +8,12 @@ interface DounetChartProps {
   series: number
 }
 
-const DounetChart = () => {
+interface Props {
+  data: number
+  state: string
+}
+
+const DounetChart = ({ data, state }: Props) => {
   // const options: ApexOptions = {
   //   chart: {
   //     type: 'radialBar',
@@ -100,10 +105,10 @@ const DounetChart = () => {
         }}
       >
         <Typography variant="body1" sx={{ fontSize: 50 }}>
-          736
+          {data}
         </Typography>
         <Typography variant="body1" sx={{ fontSize: 20, color: '#3A50DE' }}>
-          높음
+          {state}
         </Typography>
       </Grid>
     </Grid>

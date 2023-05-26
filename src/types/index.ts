@@ -55,3 +55,15 @@ export interface ResultComapnyType {
   text: string
   img: string
 }
+
+export interface Result {
+  myCompany: ResultComapnyType
+  wantCompany: ResultComapnyType
+}
+
+export interface ScoreType {
+  type1: number
+  type2: number
+  type3: number
+  type4: number
+}

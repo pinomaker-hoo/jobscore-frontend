@@ -16,7 +16,28 @@ import {
 import WalkingDuck from '@/components/duck/walkingDuck'
 import DounetChart from '@/components/chart/dounetChart'
 
-const ResultPageView = () => {
+// ** Type Imports
+import { Result, ScoreType } from '@/types'
+
+interface Props {
+  companyType: Result
+  myCompany: ScoreType
+  wantCompany: ScoreType
+}
+
+const ResultPageView = ({ companyType, myCompany, wantCompany }: Props) => {
+  const getTotalScore = (score: ScoreType) => {
+    return Object.values(score).reduce((cur, ocr) => {
+      return cur + ocr
+    }, 0)
+  }
+
+  const getTextColor = (a: number, b: number) => {
+    if (a > b) return 'blue'
+    if (a < b) return 'red'
+    return 'black'
+  }
+
   return (
     <Grid container spacing={3}>
       <Grid item xs={4.5}>
@@ -45,7 +66,7 @@ const ResultPageView = () => {
                   </Typography>
                 </Grid>
                 <Grid item xs={12} sx={{ textAlign: 'center', mb: -5 }}>
-                  <DounetChart />
+                  <DounetChart data={getTotalScore(myCompany)} state="높음" />
                 </Grid>
                 <Grid item xs={12}>
                   <Divider
@@ -81,14 +102,17 @@ const ResultPageView = () => {
                   </Typography>
                 </Grid>
                 <Grid item xs={12} sx={{ textAlign: 'center', mt: 2 }}>
-                  <img src="/type/type1.png" style={{ width: '90%' }} />
+                  <img
+                    src={companyType.myCompany.img}
+                    style={{ width: '90%' }}
+                  />
                 </Grid>
                 <Grid item xs={12} sx={{ textAlign: 'center', mt: 2 }}>
                   <Typography
                     sx={{ ml: '10%', width: '80%', color: '#2084F2' }}
                     variant="h6"
                   >
-                    "지상낙원" 스타일
+                    "{companyType.myCompany.title}" 스타일
                   </Typography>
                 </Grid>
                 <Grid item xs={12} sx={{ textAlign: 'center' }}>
@@ -96,7 +120,7 @@ const ResultPageView = () => {
                     sx={{ ml: '10%', width: '80%', fontSize: 12 }}
                     variant="body2"
                   >
-                    몸과 마음 다 여유로운 회사 생활이 될 수 있겠어요.
+                    {companyType.myCompany.text}
                   </Typography>
                 </Grid>
                 <Grid item xs={6} sx={{ mt: 3 }}>
@@ -106,13 +130,13 @@ const ResultPageView = () => {
                 </Grid>
                 <Grid item xs={6} sx={{ textAlign: 'right', mt: 3 }}>
                   <Typography variant="body1" sx={{ fontSize: 14 }}>
-                    182 / 200
+                    {myCompany.type1} / 180
                   </Typography>
                 </Grid>
                 <Grid item xs={12} sx={{ textAlign: 'center', my: 1 }}>
                   <LinearProgress
                     variant="determinate"
-                    value={30}
+                    value={myCompany.type1 * (10 / 18)}
                     color="error"
                     sx={{
                       height: 14,
@@ -141,13 +165,13 @@ const ResultPageView = () => {
                 </Grid>
                 <Grid item xs={6} sx={{ textAlign: 'right' }}>
                   <Typography variant="body1" sx={{ fontSize: 14 }}>
-                    182 / 200
+                    {myCompany.type2} / 180
                   </Typography>
                 </Grid>
                 <Grid item xs={12} sx={{ textAlign: 'center', my: 1 }}>
                   <LinearProgress
                     variant="determinate"
-                    value={60}
+                    value={myCompany.type2 * (10 / 18)}
                     color="error"
                     sx={{
                       height: 14,
@@ -176,13 +200,13 @@ const ResultPageView = () => {
                 </Grid>
                 <Grid item xs={7} sx={{ textAlign: 'right' }}>
                   <Typography variant="body1" sx={{ fontSize: 14 }}>
-                    182 / 200
+                    {myCompany.type3} / 180
                   </Typography>
                 </Grid>
                 <Grid item xs={12} sx={{ textAlign: 'center', my: 1 }}>
                   <LinearProgress
                     variant="determinate"
-                    value={60}
+                    value={myCompany.type3 * (10 / 18)}
                     color="error"
                     sx={{
                       height: 14,
@@ -211,13 +235,13 @@ const ResultPageView = () => {
                 </Grid>
                 <Grid item xs={6} sx={{ textAlign: 'right' }}>
                   <Typography variant="body1" sx={{ fontSize: 14 }}>
-                    182 / 200
+                    {myCompany.type4} / 180
                   </Typography>
                 </Grid>
                 <Grid item xs={12} sx={{ textAlign: 'center', my: 1 }}>
                   <LinearProgress
                     variant="determinate"
-                    value={60}
+                    value={myCompany.type4 * (10 / 18)}
                     color="error"
                     sx={{
                       height: 14,
@@ -257,7 +281,7 @@ const ResultPageView = () => {
                   </Typography>
                 </Grid>
                 <Grid item xs={12} sx={{ textAlign: 'center', mb: -5 }}>
-                  <DounetChart />
+                  <DounetChart data={getTotalScore(wantCompany)} state="낮음" />
                 </Grid>
                 <Grid item xs={12}>
                   <Divider
@@ -293,14 +317,17 @@ const ResultPageView = () => {
                   </Typography>
                 </Grid>
                 <Grid item xs={12} sx={{ textAlign: 'center', mt: 2 }}>
-                  <img src="/type/type2.png" style={{ width: '90%' }} />
+                  <img
+                    src={companyType.wantCompany.img}
+                    style={{ width: '90%' }}
+                  />
                 </Grid>
                 <Grid item xs={12} sx={{ textAlign: 'center', mt: 2 }}>
                   <Typography
                     sx={{ ml: '10%', width: '80%', color: '#2084F2' }}
                     variant="h6"
                   >
-                    "지상낙원" 스타일
+                    "{companyType.wantCompany.title}" 스타일
                   </Typography>
                 </Grid>
                 <Grid item xs={12} sx={{ textAlign: 'center' }}>
@@ -308,7 +335,7 @@ const ResultPageView = () => {
                     sx={{ ml: '10%', width: '80%', fontSize: 12 }}
                     variant="body2"
                   >
-                    몸과 마음 다 여유로운 회사 생활이 될 수 있겠어요.
+                    {companyType.wantCompany.text}
                   </Typography>
                 </Grid>
                 <Grid item xs={6} sx={{ mt: 3 }}>
@@ -318,13 +345,13 @@ const ResultPageView = () => {
                 </Grid>
                 <Grid item xs={6} sx={{ textAlign: 'right', mt: 3 }}>
                   <Typography variant="body1" sx={{ fontSize: 14 }}>
-                    182 / 200
+                    {wantCompany.type1} / 180
                   </Typography>
                 </Grid>
                 <Grid item xs={12} sx={{ textAlign: 'center', my: 1 }}>
                   <LinearProgress
                     variant="determinate"
-                    value={60}
+                    value={wantCompany.type1 * (10 / 18)}
                     color="error"
                     sx={{
                       height: 14,
@@ -353,13 +380,13 @@ const ResultPageView = () => {
                 </Grid>
                 <Grid item xs={6} sx={{ textAlign: 'right' }}>
                   <Typography variant="body1" sx={{ fontSize: 14 }}>
-                    182 / 200
+                    {wantCompany.type2} / 180
                   </Typography>
                 </Grid>
                 <Grid item xs={12} sx={{ textAlign: 'center', my: 1 }}>
                   <LinearProgress
                     variant="determinate"
-                    value={60}
+                    value={wantCompany.type2 * (10 / 18)}
                     color="error"
                     sx={{
                       height: 14,
@@ -388,13 +415,13 @@ const ResultPageView = () => {
                 </Grid>
                 <Grid item xs={7} sx={{ textAlign: 'right' }}>
                   <Typography variant="body1" sx={{ fontSize: 14 }}>
-                    182 / 200
+                    {wantCompany.type3} / 180
                   </Typography>
                 </Grid>
                 <Grid item xs={12} sx={{ textAlign: 'center', my: 1 }}>
                   <LinearProgress
                     variant="determinate"
-                    value={60}
+                    value={wantCompany.type3 * (10 / 18)}
                     color="error"
                     sx={{
                       height: 14,
@@ -423,13 +450,13 @@ const ResultPageView = () => {
                 </Grid>
                 <Grid item xs={6} sx={{ textAlign: 'right' }}>
                   <Typography variant="body1" sx={{ fontSize: 14 }}>
-                    182 / 200
+                    {wantCompany.type4} / 180
                   </Typography>
                 </Grid>
                 <Grid item xs={12} sx={{ textAlign: 'center', my: 1 }}>
                   <LinearProgress
                     variant="determinate"
-                    value={60}
+                    value={wantCompany.type4 * (10 / 18)}
                     color="error"
                     sx={{
                       height: 14,
@@ -484,19 +511,60 @@ const ResultPageView = () => {
                     우리 회사
                   </Typography>
                 </Grid>
-                <Grid item xs={12}>
-                  <Typography variant="h6">72/180</Typography>
+                <Grid item xs={8}>
+                  <Typography variant="h6">
+                    <span
+                      style={{
+                        color: getTextColor(myCompany.type1, wantCompany.type1),
+                      }}
+                    >
+                      {myCompany.type1}
+                    </span>{' '}
+                    / 180
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  {myCompany.type1 > wantCompany.type1 && (
+                    <Typography>
+                      <span
+                        style={{
+                          color: 'blue',
+                        }}
+                      >
+                        ▲{myCompany.type1 - wantCompany.type1}
+                      </span>
+                    </Typography>
+                  )}
                 </Grid>
                 <Grid item xs={12} sx={{ mt: 2 }}>
                   <Typography variant="body2" sx={{ fontSize: 10 }}>
                     내가 원하는 회사
                   </Typography>
                 </Grid>
-                <Grid item xs={9}>
-                  <Typography variant="h6">123/180</Typography>
+                <Grid item xs={8}>
+                  <Typography variant="h6">
+                    <span
+                      style={{
+                        color: getTextColor(wantCompany.type1, myCompany.type1),
+                      }}
+                    >
+                      {wantCompany.type1}
+                    </span>{' '}
+                    / 180
+                  </Typography>
                 </Grid>
-                <Grid item xs={3}>
-                  <img src="/review/num.png" />
+                <Grid item xs={4}>
+                  {wantCompany.type1 > myCompany.type1 && (
+                    <Typography>
+                      <span
+                        style={{
+                          color: 'blue',
+                        }}
+                      >
+                        ▲{wantCompany.type1 - myCompany.type1}
+                      </span>
+                    </Typography>
+                  )}
                 </Grid>
               </Grid>
             </Card>
@@ -506,7 +574,6 @@ const ResultPageView = () => {
               sx={{
                 p: 3,
                 width: '90%',
-
                 backgroundColor: alpha('#B8DDFF', 0.2),
                 boxShadow: 'none',
                 borderRadius: 3,
@@ -521,19 +588,60 @@ const ResultPageView = () => {
                     우리 회사
                   </Typography>
                 </Grid>
-                <Grid item xs={12}>
-                  <Typography variant="h6">72/180</Typography>
+                <Grid item xs={8}>
+                  <Typography variant="h6">
+                    <span
+                      style={{
+                        color: getTextColor(myCompany.type2, wantCompany.type2),
+                      }}
+                    >
+                      {myCompany.type2}
+                    </span>{' '}
+                    / 180
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  {myCompany.type2 > wantCompany.type2 && (
+                    <Typography>
+                      <span
+                        style={{
+                          color: 'blue',
+                        }}
+                      >
+                        ▲{myCompany.type2 - wantCompany.type2}
+                      </span>
+                    </Typography>
+                  )}
                 </Grid>
                 <Grid item xs={12} sx={{ mt: 2 }}>
                   <Typography variant="body2" sx={{ fontSize: 10 }}>
                     내가 원하는 회사
                   </Typography>
                 </Grid>
-                <Grid item xs={9}>
-                  <Typography variant="h6">123/180</Typography>
+                <Grid item xs={8}>
+                  <Typography variant="h6">
+                    <span
+                      style={{
+                        color: getTextColor(wantCompany.type2, myCompany.type2),
+                      }}
+                    >
+                      {wantCompany.type2}
+                    </span>{' '}
+                    / 180
+                  </Typography>
                 </Grid>
-                <Grid item xs={3}>
-                  <img src="/review/num.png" />
+                <Grid item xs={4}>
+                  {wantCompany.type2 > myCompany.type2 && (
+                    <Typography>
+                      <span
+                        style={{
+                          color: 'blue',
+                        }}
+                      >
+                        ▲{wantCompany.type2 - myCompany.type2}
+                      </span>
+                    </Typography>
+                  )}
                 </Grid>
               </Grid>
             </Card>
@@ -558,19 +666,60 @@ const ResultPageView = () => {
                     우리 회사
                   </Typography>
                 </Grid>
-                <Grid item xs={12}>
-                  <Typography variant="h6">72/180</Typography>
+                <Grid item xs={8}>
+                  <Typography variant="h6">
+                    <span
+                      style={{
+                        color: getTextColor(myCompany.type3, wantCompany.type3),
+                      }}
+                    >
+                      {myCompany.type3}
+                    </span>{' '}
+                    / 180
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  {myCompany.type3 > wantCompany.type3 && (
+                    <Typography>
+                      <span
+                        style={{
+                          color: 'blue',
+                        }}
+                      >
+                        ▲{myCompany.type3 - wantCompany.type3}
+                      </span>
+                    </Typography>
+                  )}
                 </Grid>
                 <Grid item xs={12} sx={{ mt: 2 }}>
                   <Typography variant="body2" sx={{ fontSize: 10 }}>
                     내가 원하는 회사
                   </Typography>
                 </Grid>
-                <Grid item xs={9}>
-                  <Typography variant="h6">123/180</Typography>
+                <Grid item xs={8}>
+                  <Typography variant="h6">
+                    <span
+                      style={{
+                        color: getTextColor(wantCompany.type3, myCompany.type3),
+                      }}
+                    >
+                      {wantCompany.type3}
+                    </span>{' '}
+                    / 180
+                  </Typography>
                 </Grid>
-                <Grid item xs={3}>
-                  <img src="/review/num.png" />
+                <Grid item xs={4}>
+                  {wantCompany.type3 > myCompany.type3 && (
+                    <Typography>
+                      <span
+                        style={{
+                          color: 'blue',
+                        }}
+                      >
+                        ▲{wantCompany.type3 - myCompany.type3}
+                      </span>
+                    </Typography>
+                  )}
                 </Grid>
               </Grid>
             </Card>
@@ -594,19 +743,60 @@ const ResultPageView = () => {
                     우리 회사
                   </Typography>
                 </Grid>
-                <Grid item xs={12}>
-                  <Typography variant="h6">72/180</Typography>
+                <Grid item xs={8}>
+                  <Typography variant="h6">
+                    <span
+                      style={{
+                        color: getTextColor(myCompany.type4, wantCompany.type4),
+                      }}
+                    >
+                      {myCompany.type4}
+                    </span>{' '}
+                    / 180
+                  </Typography>
+                </Grid>
+                <Grid item xs={4}>
+                  {myCompany.type4 > wantCompany.type4 && (
+                    <Typography>
+                      <span
+                        style={{
+                          color: 'blue',
+                        }}
+                      >
+                        ▲{myCompany.type4 - wantCompany.type4}
+                      </span>
+                    </Typography>
+                  )}
                 </Grid>
                 <Grid item xs={12} sx={{ mt: 2 }}>
                   <Typography variant="body2" sx={{ fontSize: 10 }}>
                     내가 원하는 회사
                   </Typography>
                 </Grid>
-                <Grid item xs={9}>
-                  <Typography variant="h6">123/180</Typography>
+                <Grid item xs={8}>
+                  <Typography variant="h6">
+                    <span
+                      style={{
+                        color: getTextColor(wantCompany.type4, myCompany.type4),
+                      }}
+                    >
+                      {wantCompany.type4}
+                    </span>{' '}
+                    / 180
+                  </Typography>
                 </Grid>
-                <Grid item xs={3}>
-                  <img src="/review/num.png" />
+                <Grid item xs={4}>
+                  {wantCompany.type4 > myCompany.type4 && (
+                    <Typography>
+                      <span
+                        style={{
+                          color: 'blue',
+                        }}
+                      >
+                        ▲{wantCompany.type4 - myCompany.type4}
+                      </span>
+                    </Typography>
+                  )}
                 </Grid>
               </Grid>
             </Card>
