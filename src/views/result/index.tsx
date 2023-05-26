@@ -23,9 +23,15 @@ interface Props {
   companyType: Result
   myCompany: ScoreType
   wantCompany: ScoreType
+  handleKakao: () => void
 }
 
-const ResultPageView = ({ companyType, myCompany, wantCompany }: Props) => {
+const ResultPageView = ({
+  companyType,
+  myCompany,
+  wantCompany,
+  handleKakao,
+}: Props) => {
   const getTotalScore = (score: ScoreType) => {
     return Object.values(score).reduce((cur, ocr) => {
       return cur + ocr
@@ -831,14 +837,20 @@ const ResultPageView = ({ companyType, myCompany, wantCompany }: Props) => {
                   <img src="/share/link.png" />
                 </Grid>
                 <Grid item xs={6} sx={{ textAlign: 'center' }}>
-                  <Typography variant="body2" sx={{ fontSize: 12 }}>
+                  <Button
+                    onClick={handleKakao}
+                    sx={{ color: 'black', fontSize: 12, mt: -2 }}
+                  >
                     카카오톡 공유하기
-                  </Typography>
+                  </Button>
                 </Grid>
                 <Grid item xs={6} sx={{ textAlign: 'center' }}>
-                  <Typography variant="body2" sx={{ fontSize: 12 }}>
+                  <Button
+                    // onClick={handleKakao}
+                    sx={{ color: 'black', fontSize: 12, mt: -2 }}
+                  >
                     링크 복사하기
-                  </Typography>
+                  </Button>
                 </Grid>
               </Grid>
             </Card>

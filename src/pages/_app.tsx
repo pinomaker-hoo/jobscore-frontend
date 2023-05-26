@@ -15,6 +15,12 @@ import type { AppProps } from 'next/app'
 // ** Other Imports
 import { isMobile } from 'react-device-detect'
 
+declare global {
+  interface Window {
+    Kakao: any
+  }
+}
+
 const App = ({ Component, pageProps }: AppProps) => {
   return (
     <Provider store={store}>

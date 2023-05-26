@@ -49,6 +49,21 @@ const ResultPage = () => {
     return arr[0]
   }
 
+  const handleKakao = async () => {
+    const kakao = window.Kakao
+
+    if (!kakao.isInitialized()) {
+      kakao.init('beb93c49d1c89f713c2266e791f6e6a3')
+    }
+
+    await kakao.Share.sendCustom({
+      templateId: 94310,
+      templateArgs: {
+        image: 'http://phone.pinodev.shop:3000' + companyType.myCompany.img,
+      },
+    })
+  }
+
   useEffect(() => {
     if (myCompany) {
       setCompanyType((cur) => ({ ...cur, myCompany: getResultType(myCompany) }))
@@ -67,6 +82,7 @@ const ResultPage = () => {
       wantCompany={wantCompany}
       myCompany={myCompany}
       companyType={companyType}
+      handleKakao={handleKakao}
     />
   )
 }
