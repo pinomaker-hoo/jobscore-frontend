@@ -30,6 +30,7 @@
     "next": "13.3.0",
     "react": "18.2.0",
     "react-apexcharts": "^1.4.0",
+    "react-copy-to-clipboard": "^5.1.0",
     "react-device-detect": "^2.2.3",
     "react-dom": "18.2.0",
     "react-lottie": "^1.2.3",
@@ -40,6 +41,7 @@
   "devDependencies": {
     "@types/lodash": "4.14.175",
     "@types/mui-image": "^1.0.1",
+    "@types/react-copy-to-clipboard": "^5.0.4",
     "@types/react-lottie": "^1.2.6",
     "@types/react-redux": "^7.1.25",
     "prettier": "^2.8.8"

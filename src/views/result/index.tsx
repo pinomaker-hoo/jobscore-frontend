@@ -22,6 +22,9 @@ import DounetChart from '@/components/chart/dounetChart'
 // ** Type Imports
 import { Result, ScoreType, TotalScore } from '@/types'
 
+// ** Other Imports
+import { CopyToClipboard } from 'react-copy-to-clipboard'
+
 interface Props {
   companyType: Result
   myCompany: ScoreType
@@ -834,10 +837,17 @@ const ResultPageView = ({
             >
               <Grid container>
                 <Grid item xs={6} sx={{ textAlign: 'center' }}>
-                  <img src="/share/kakao.png" />
+                  <Button onClick={handleKakao} sx={{ mt: -1 }}>
+                    <img src="/share/kakao.png" />
+                  </Button>
                 </Grid>
                 <Grid item xs={6} sx={{ textAlign: 'center' }}>
-                  <img src="/share/link.png" />
+                  <CopyToClipboard
+                    text="http://phone.pinodev.shop:3000"
+                    onCopy={() => alert('클립보드에 복사되었습니다.')}
+                  >
+                    <img src="/share/link.png" />
+                  </CopyToClipboard>
                 </Grid>
                 <Grid item xs={6} sx={{ textAlign: 'center' }}>
                   <Button
@@ -848,12 +858,14 @@ const ResultPageView = ({
                   </Button>
                 </Grid>
                 <Grid item xs={6} sx={{ textAlign: 'center' }}>
-                  <Button
-                    // onClick={handleKakao}
-                    sx={{ color: 'black', fontSize: 12, mt: -2 }}
+                  <CopyToClipboard
+                    text="http://phone.pinodev.shop:3000"
+                    onCopy={() => alert('클립보드에 복사되었습니다.')}
                   >
-                    링크 복사하기
-                  </Button>
+                    <Button sx={{ color: 'black', fontSize: 12, mt: -2 }}>
+                      링크 복사하기
+                    </Button>
+                  </CopyToClipboard>
                 </Grid>
               </Grid>
             </Card>
