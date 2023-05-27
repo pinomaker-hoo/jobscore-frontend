@@ -72,3 +72,24 @@ export interface TotalScore {
   myCompany: number
   wantCompany: number
 }
+
+export interface SaveMyCompanyResult {
+  companyId: string
+  type1: number
+  type2: number
+  type3: number
+  type4: number
+  code: string
+  department: string
+  totalCount: number
+}
+
+export interface SaveWantCompanyResult {
+  type1: number
+  type2: number
+  type3: number
+  type4: number
+  code: string
+  department: string
+  totalCount: number
+}

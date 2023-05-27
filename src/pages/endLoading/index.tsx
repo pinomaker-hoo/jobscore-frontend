@@ -14,8 +14,22 @@ import loadingEnd from '../../lotties/loading-end.json'
 // ** Other View Imports
 import WalkingDuck from '@/components/duck/walkingDuck'
 
+// ** Redux Imports
+import { useSelector } from 'react-redux'
+import { RootState } from '@/store'
+import { saveResult } from '@/services'
+
+// ** Other Imports
+import { ResultComapnyType, ScoreType } from '@/types'
+import { companyTypeData } from '@/@fake'
+
 const EndLoadingPage = () => {
   const router = useRouter()
+
+  const {
+    score: { myCompany, wantCompany },
+    company: { id, department },
+  } = useSelector((state: RootState) => state.user)
 
   const defaultOptions = {
     loop: true,
@@ -25,12 +39,56 @@ const EndLoadingPage = () => {
       preserveAspectRatio: 'xMidYMid slice',
     },
   }
+  const getResultType = (score: ScoreType) => {
+    const code = Object.values(score).reduce((cur, ocr) => {
+      if (ocr > 90) {
+        return cur + '1'
+      }
+      return cur + '0'
+    }, '')
+
+    const arr = companyTypeData.filter(
+      (item: ResultComapnyType) => item.code === code
+    )
+
+    return arr[0].code
+  }
+
+  const saveApi = () => {
+    const saveMyCompany = {
+      companyId: id,
+      department: department,
+      type1: myCompany.type1,
+      type2: myCompany.type2,
+      type3: myCompany.type3,
+      type4: myCompany.type4,
+      code: getResultType(myCompany),
+      totalCount:
+        myCompany.type1 + myCompany.type2 + myCompany.type3 + myCompany.type4,
+    }
+
+    const saveWantCompany = {
+      department: department,
+      type1: wantCompany.type1,
+      type2: wantCompany.type2,
+      type3: wantCompany.type3,
+      type4: wantCompany.type4,
+      code: getResultType(wantCompany),
+      totalCount:
+        wantCompany.type1 +
+        wantCompany.type2 +
+        wantCompany.type3 +
+        wantCompany.type4,
+    }
+    saveResult(saveMyCompany, saveWantCompany).then((res) => {
+      router.push('/result')
+    })
+  }
 
   useEffect(() => {
     const interval = setInterval(() => {
-      router.push('/result')
+      saveApi()
     }, 3000)
-
     return () => clearInterval(interval)
   }, [])
 
