@@ -885,18 +885,19 @@ const ResultPageView = ({
             </Link>
           </Grid>
           <Grid item xs={12} sx={{ textAlign: 'center', my: -1 }}>
-            <Link href="/rank">
-              <Button
-                variant="contained"
-                sx={{ width: '80%', backgroundColor: '#6176FF' }}
-              >
-                다른 회사 잡스코어
-                <img
-                  src="/common/hand.png"
-                  style={{ marginLeft: '10px', width: '10%' }}
-                />
-              </Button>
-            </Link>
+            {/* <Link href="/rank"> */}
+            <Button
+              disabled
+              variant="contained"
+              sx={{ width: '80%', backgroundColor: '#6176FF' }}
+            >
+              다른 회사 잡스코어
+              <img
+                src="/common/hand.png"
+                style={{ marginLeft: '10px', width: '10%' }}
+              />
+            </Button>
+            {/* </Link> */}
           </Grid>
           <Grid item xs={12} sx={{ textAlign: 'center' }}>
             <Button
