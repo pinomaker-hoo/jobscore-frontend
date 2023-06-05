@@ -74,9 +74,7 @@ const ResultPageView = ({
                   </Typography>
                 </Grid>
                 <Grid item xs={12} sx={{ textAlign: 'center', mb: -5 }}>
-                  {myCompany && (
-                    <DounetChart data={score.myCompany} state="높음" />
-                  )}
+                  {myCompany && <DounetChart data={score.myCompany} />}
                 </Grid>
                 <Grid item xs={12}>
                   <Divider
@@ -291,9 +289,7 @@ const ResultPageView = ({
                   </Typography>
                 </Grid>
                 <Grid item xs={12} sx={{ textAlign: 'center', mb: -5 }}>
-                  {wantCompany && (
-                    <DounetChart data={score.wantCompany} state="낮음" />
-                  )}
+                  {wantCompany && <DounetChart data={score.wantCompany} />}
                 </Grid>
                 <Grid item xs={12}>
                   <Divider

@@ -1,12 +1,24 @@
 // ** Chart Imports
 import { Grid, Typography } from '@mui/material'
+import { useMemo } from 'react'
 
 interface Props {
   data: number
-  state: string
 }
 
-const DounetChart = ({ data, state }: Props) => {
+const DounetChart = ({ data }: Props) => {
+  const state = useMemo(() => {
+    if (data > 500) {
+      return '높음'
+    }
+
+    if (data > 300) {
+      return '평균'
+    }
+
+    return '낮음'
+  }, [data])
+
   return (
     <Grid
       container
