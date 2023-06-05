@@ -891,7 +891,7 @@ const ResultPageView = ({
               variant="contained"
               sx={{ width: '80%', backgroundColor: '#6176FF' }}
             >
-              다른 회사 잡스코어
+              다른 회사 잡스코어 (준비중)
               <img
                 src="/common/hand.png"
                 style={{ marginLeft: '10px', width: '10%' }}
