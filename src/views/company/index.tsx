@@ -19,7 +19,7 @@ const CompanyPageView = ({
 }: Props) => {
   return (
     <Grid container spacing={3}>
-      <Grid item xs={3} sx={{ mt: 3, ml: 3 }}>
+      <Grid item xs={12} sx={{ mt: 3, ml: 3 }}>
         <Link href="/">
           <img src="/common/back.png" height={30} />
         </Link>
