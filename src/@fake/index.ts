@@ -612,7 +612,7 @@ export const questionData2: Question[] = [
   },
   {
     id: 23,
-    question: '직무외 다른 업무를 하는 것에 대해 어떻게 생각하나요?',
+    question: '직무외 다른 업무를 하는 것에 어떻게 생각하시나요?',
     categoryId: 5,
     answer: [
       {
