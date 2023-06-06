@@ -30,12 +30,12 @@ export const questionData1: Question[] = [
       },
       {
         id: 3,
-        text: '업무량은 많지만, 금전적으로 보상받고 있어요.',
+        text: '업무량은 많지만, 보상받고 있어요.',
         point: 24,
       },
       {
         id: 4,
-        text: '급여와 업무량이 비례하거나, 급여대비 업무가 적어요.',
+        text: '급여대비 업무량이 비례 or 적어요.',
         point: 36,
       },
     ],
@@ -52,7 +52,7 @@ export const questionData1: Question[] = [
       },
       {
         id: 6,
-        text: '대다수가 불필요하지만, 감당해야 한다고 생각하고 있어요.',
+        text: '불필요하지만, 감당해야 한다고 생각해요.',
         point: 15,
       },
       {
@@ -69,22 +69,22 @@ export const questionData1: Question[] = [
   },
   {
     id: 3,
-    question: '현재 회사에서 내가 맡고 있는 업무 외 다른 업무를 하나요?',
+    question: '현재 회사에서 직무 외 다른 업무를 하나요?',
     categoryId: 1,
     answer: [
       {
         id: 9,
-        text: '업무시간 외 상사의 개인적인 심부름도 있어요.',
+        text: '상사의 개인적인 심부름도 있어요.',
         point: 3,
       },
       {
         id: 10,
-        text: '회사 내에서 업무시간에 간혹 다른 업무를 하기도 해요.',
+        text: '업무시간에 간혹 다른 업무를 하기도 해요.',
         point: 15,
       },
       {
         id: 11,
-        text: '제가 꼭 필요한 자리라면 다른 업무를 하기도 해요.',
+        text: '제가 꼭 필요한 자리라면 가끔 해요.',
         point: 24,
       },
       {
@@ -192,7 +192,7 @@ export const questionData1: Question[] = [
       },
       {
         id: 27,
-        text: '친한 팀원간 합의된 회식만 참여하고 있어요.',
+        text: '친한 팀원간 합의된 회식만 참여해요.',
         point: 24,
       },
       {
@@ -322,7 +322,7 @@ export const questionData1: Question[] = [
       },
       {
         id: 46,
-        text: '업무에 지장이 가지 않는 선에서 사용하고 있어요.',
+        text: '업무에 지장 가지 않는 선에서 사용해요.',
         point: 15,
       },
       {
@@ -349,7 +349,7 @@ export const questionData1: Question[] = [
       },
       {
         id: 50,
-        text: '지정해준 자기개발 프로그램에 참여해야 해요.',
+        text: '지정해준 프로그램에 참여해야 해요.',
         point: 15,
       },
       {
@@ -462,12 +462,12 @@ export const questionData1: Question[] = [
       },
       {
         id: 67,
-        text: '일부 안맞는 부분이 있지만 감수하고 있어요.',
+        text: '잘 맞는 부분이 많아요',
         point: 24,
       },
       {
         id: 68,
-        text: '저와 잘 맞아요.',
+        text: '저와 너무 잘 맞아요.',
         point: 36,
       },
     ],
@@ -533,7 +533,7 @@ export const questionData1: Question[] = [
     answer: [
       {
         id: 77,
-        text: '지금 이 회사가 언제 망해도 이상하지 않아요.',
+        text: '이 회사가 언제 망해도 이상하지 않아요.',
         point: 3,
       },
       {
@@ -543,7 +543,7 @@ export const questionData1: Question[] = [
       },
       {
         id: 79,
-        text: '동기부여를 위한 어느 정도의 비전이 있어요.',
+        text: '동기부여를 위한 적당한 비전이 있어요.',
         point: 24,
       },
       {
@@ -568,12 +568,12 @@ export const questionData2: Question[] = [
       },
       {
         id: 82,
-        text: '배울수만 있다면 업무량이 많더라도 상관없어요.',
+        text: '배울수 있다면 일이 많아도 상관없어요.',
         point: 15,
       },
       {
         id: 83,
-        text: '어느정도 업무량에 따라 상여금정도는 있어야 한다고 생각해요.',
+        text: '돈으로 보상받으면 일이 많아도 돼요.',
         point: 24,
       },
       {
@@ -612,22 +612,22 @@ export const questionData2: Question[] = [
   },
   {
     id: 23,
-    question: '직무외 다른 업무를 하는 것에 대해 어떻게 생각하시나요?',
+    question: '직무외 다른 업무를 하는 것에 대해 어떻게 생각하나요?',
     categoryId: 5,
     answer: [
       {
         id: 89,
-        text: '상사가 시키는 일은 심부름도 업무라고 생각해요.',
+        text: '상사가 시키면 심부름도 업무!',
         point: 3,
       },
       {
         id: 90,
-        text: '업무시간에 이루어지는 일은 모두 업무라고 생각해요.',
+        text: '업무시간에 생기는 일은 모두 업무에요.',
         point: 15,
       },
       {
         id: 91,
-        text: '어느 정도 조정은 필요하겠지만 웬만하면 할 것 같아요.',
+        text: '조정은 필요하겠지만 웬만하면 할 것 같아요.',
         point: 24,
       },
       {
@@ -666,7 +666,7 @@ export const questionData2: Question[] = [
   },
   {
     id: 25,
-    question: '공휴일에 업무를 하는 것에 대해 어떻게 생각하시나요?',
+    question: '공휴일 근무에 대해 어떻게 생각하시나요?',
     categoryId: 5,
     answer: [
       {
@@ -730,12 +730,12 @@ export const questionData2: Question[] = [
       },
       {
         id: 106,
-        text: '미리 공지된 회식은 참여해야 한다고 생각해요.',
+        text: '미리 공지하면 참여해야 한다고 생각해요.',
         point: 15,
       },
       {
         id: 107,
-        text: '친한 팀원간 합의된 회식만 참여하고 싶어요.',
+        text: '친한 팀원간 회식만 참여하고 싶어요.',
         point: 24,
       },
       {
@@ -789,12 +789,12 @@ export const questionData2: Question[] = [
       },
       {
         id: 115,
-        text: '듣기 싫은 소리 정도는 감내해야한다고 생각해요.',
+        text: '잔소리 정도는 들어야 한다고 생각해요.',
         point: 24,
       },
       {
         id: 116,
-        text: '상황에 따라 어쩔 수 없는 지각은 생길수 있죠.',
+        text: '때에 따라 불가피한 지각은 생길 수 있죠.',
         point: 36,
       },
     ],
@@ -865,12 +865,12 @@ export const questionData2: Question[] = [
       },
       {
         id: 126,
-        text: '업무에 지장이 가지 않는 선에서 사용하는게 좋아요.',
+        text: '업무에 지장이 가지 않는 선에서 사용.',
         point: 15,
       },
       {
         id: 127,
-        text: '미리 말하고 원하는 날 사용할 수 있으면 돼요.',
+        text: '미리 말하고 원하는 날 사용.',
         point: 24,
       },
       {
@@ -882,7 +882,7 @@ export const questionData2: Question[] = [
   },
   {
     id: 33,
-    question: '직원을 위한 자기개발 프로그램에 대해서 어떤 생각인가요?',
+    question: '사내 자기개발 프로그램에 대해서 어떤 생각인가요?',
     categoryId: 7,
     answer: [
       {
@@ -897,7 +897,7 @@ export const questionData2: Question[] = [
       },
       {
         id: 131,
-        text: '선택적 참여가 가능한 프로그램이 있어야해요.',
+        text: '선택적 참여 프로그램이 있어야해요.',
         point: 24,
       },
       {
@@ -995,17 +995,17 @@ export const questionData2: Question[] = [
     answer: [
       {
         id: 145,
-        text: '시켜만 주신다면 하나도 안맞아도 상관없어요.',
+        text: '시켜만 주신다면 무엇이든 해요.',
         point: 3,
       },
       {
         id: 146,
-        text: '처음엔 잘 안맞더라도 다니면서 맞춰가는거라 생각해요.',
+        text: '잘 안맞더라도 맞춰 간다 생각해요.',
         point: 15,
       },
       {
         id: 147,
-        text: '어느 정도 잘 맞으면 일부 안맞는 부분은 감수할 수 있어요.',
+        text: '일부 안맞는 부분은 감수할 수 있어요.',
         point: 24,
       },
       {
@@ -1017,12 +1017,12 @@ export const questionData2: Question[] = [
   },
   {
     id: 38,
-    question: '회사에서 하는 업무가 본인의 이력에 얼마나 도움 되길 원하나요?',
+    question: '업무가 본인의 이력에 얼마나 도움 되길 원하나요?',
     categoryId: 8,
     answer: [
       {
         id: 149,
-        text: '돈만 주신다면, 아무 도움 안돼도 상관 없어요.',
+        text: '돈만 주신다면, 아무 도움 안돼도 무관해요.',
         point: 3,
       },
       {
@@ -1032,7 +1032,7 @@ export const questionData2: Question[] = [
       },
       {
         id: 151,
-        text: '적어도 절반의 업무는 이력에 도움이 되길 원해요.',
+        text: '절반의 업무는 이력에 도움이 되길 원해요.',
         point: 24,
       },
       {
@@ -1086,7 +1086,7 @@ export const questionData2: Question[] = [
       },
       {
         id: 159,
-        text: '동기부여를 위한 어느 정도의 비전은 필요하다고 생각해요.',
+        text: '동기부여를 위한 비전 정도는 필요해요.',
         point: 24,
       },
       {
