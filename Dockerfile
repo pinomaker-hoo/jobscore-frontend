@@ -18,7 +18,7 @@ COPY --from=builder /app/package.json ./
 COPY --from=builder /app/yarn.lock ./
 COPY --from=builder /app/.next ./.next
 
-RUN yarn
+RUN yarn install
 
 EXPOSE 3000
 
