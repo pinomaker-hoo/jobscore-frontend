@@ -4,7 +4,11 @@ WORKDIR /app
 
 COPY package.json yarn.lock ./
 
+
+RUN [ "cross-build-start" ]
 RUN yarn
+RUN [ "cross-build-end" ]
+
 
 COPY . .
 
