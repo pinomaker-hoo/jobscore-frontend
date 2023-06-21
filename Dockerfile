@@ -1,20 +1,15 @@
-FROM node:16-alpine
+FROM node:14-alpine
 
-WORKDIR /app
+RUN apt-get update && apt-get install -y --no-install-recommends qemu-user-static
 
-COPY package.json yarn.lock ./
+COPY . /usr/src/app
+WORKDIR /usr/src/app
 
-
-RUN [ "cross-build-start" ]
-RUN yarn
+RUN [ "cross-build-start", "--platform", "arm64" ]
+RUN yarn install
 RUN [ "cross-build-end" ]
 
-
-COPY . .
-
-
 RUN yarn build
-
 
 EXPOSE 3000
 
