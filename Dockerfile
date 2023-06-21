@@ -14,11 +14,11 @@ FROM arm64v8/node:14-alpine
 
 WORKDIR /app
 
-COPY --from=builder /usr/src/app/package.json ./
-COPY --from=builder /usr/src/app/yarn.lock ./
-COPY --from=builder /usr/src/app/.next ./.next
+COPY --from=builder /app/package.json ./
+COPY --from=builder /app/yarn.lock ./
+COPY --from=builder /app/.next ./.next
 
-RUN yarn install --production
+RUN yarn
 
 EXPOSE 3000
 
