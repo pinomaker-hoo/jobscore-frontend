@@ -2,7 +2,7 @@
 import Link from 'next/link'
 
 // ** Mui Imports
-import { Button, Grid, Typography } from '@mui/material'
+import { Button, Box, Typography } from '@mui/material'
 
 // ** Type Imports
 import { Department } from '@/types'
@@ -38,41 +38,46 @@ const CategoryPageView = ({
   handleNext,
 }: Props) => {
   return (
-    <Grid container spacing={3}>
-      <Grid item xs={3} sx={{ mt: 3, ml: 3 }}>
+    <Box display="flex" flexDirection="column">
+      <Box mt={3} ml={3}>
         <Link href="/company">
           <img src="/common/back.png" height={30} />
         </Link>
-      </Grid>
-      <Grid item xs={12} sx={{ mt: 10, ml: 3 }}>
+      </Box>
+      <Box ml={3} mt={10} textAlign="left">
         <Typography variant="h4">
           현재 근무중인
           <br /> 부서를 선택해 주세요
         </Typography>
-      </Grid>
-      <Grid item xs={12} sx={{ ml: 3, mb: 2 }}>
+      </Box>
+      <Box ml={3} mb={2} textAlign="left">
         <Typography variant="body2">
           부서를 선택시 잡스랭킹에 부서별 평점이 올라가요!
           <br /> 원치 않을경우 비공개를 선택해 주세요
         </Typography>
-      </Grid>
-      <Grid item xs={12} sx={{ ml: 3 }}>
-        <Grid container spacing={1.5}>
+      </Box>
+      <Box ml={3}>
+        <Box display="flex" flexWrap="wrap" justifyContent="flex-start" mb={2}>
           {departmentList.map((item: Department) => (
-            <Grid item xs={item.size} key={item.id}>
+            <Box key={item.id} mr={1.5} mb={1.5}>
               <Button
                 variant={item.name === department ? 'contained' : 'outlined'}
                 fullWidth
                 onClick={() => handleBtnClick(item.name)}
-                sx={{ height: 40 }}
+                sx={{
+                  textTransform: 'none',
+                  whiteSpace: 'normal',
+                  minWidth: 0,
+                  height: 'auto',
+                }}
               >
                 {item.name}
               </Button>
-            </Grid>
+            </Box>
           ))}
-        </Grid>
-      </Grid>
-      <Grid item xs={12} sx={{ textAlign: 'center', mt: 1.5 }}>
+        </Box>
+      </Box>
+      <Box textAlign="center" mt={1.5}>
         <Button
           variant="contained"
           size="large"
@@ -82,8 +87,8 @@ const CategoryPageView = ({
         >
           다음
         </Button>
-      </Grid>
-    </Grid>
+      </Box>
+    </Box>
   )
 }
 
