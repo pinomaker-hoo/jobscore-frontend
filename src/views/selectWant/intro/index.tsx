@@ -29,7 +29,7 @@ const SelectWantIntroPageView = () => {
   }
 
   return (
-    <Grid container sx={{ backgroundColor: '#F4BC00' }}>
+    <Grid container sx={{ backgroundColor: '#F4BC00', height: '100vh' }}>
       <Grid item xs={12} sx={{ textAlign: 'center', mb: -5, mt: -5 }}>
         <Lottie options={defaultOptions} width={350} />
       </Grid>

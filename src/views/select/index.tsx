@@ -26,7 +26,7 @@ const SelectPageView = ({ count, handleChange }: Props) => {
   const selectData = [...questionData1]
 
   return (
-    <Grid container sx={{ backgroundColor: '#629DD7' }}>
+    <Grid container sx={{ backgroundColor: '#629DD7', height: '100vh' }}>
       <Grid item xs={12} sx={{ textAlign: 'right', pr: 3, pt: 3 }}>
         <Typography variant="h6" sx={{ color: 'white' }}>
           {count + 1} / 40
