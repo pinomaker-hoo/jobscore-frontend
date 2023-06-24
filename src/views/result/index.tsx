@@ -589,7 +589,7 @@ const ResultPageView = ({
             >
               <Grid container>
                 <Grid item xs={12}>
-                  <Typography variant="h6">업무 강도</Typography>
+                  <Typography variant="h6">출/퇴근 자유도</Typography>
                 </Grid>
                 <Grid item xs={12} sx={{ mt: 2 }}>
                   <Typography variant="body2" sx={{ fontSize: 10 }}>
@@ -667,7 +667,7 @@ const ResultPageView = ({
             >
               <Grid container>
                 <Grid item xs={12}>
-                  <Typography variant="h6">업무 강도</Typography>
+                  <Typography variant="h6">복지 점수</Typography>
                 </Grid>
                 <Grid item xs={12} sx={{ mt: 2 }}>
                   <Typography variant="body2" sx={{ fontSize: 10 }}>
@@ -744,7 +744,7 @@ const ResultPageView = ({
             >
               <Grid container>
                 <Grid item xs={12}>
-                  <Typography variant="h6">업무 강도</Typography>
+                  <Typography variant="h6">성장 가능성</Typography>
                 </Grid>
                 <Grid item xs={12} sx={{ mt: 2 }}>
                   <Typography variant="body2" sx={{ fontSize: 10 }}>
