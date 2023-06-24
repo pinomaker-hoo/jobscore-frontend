@@ -37,12 +37,7 @@ const CompanySearchView = ({
 
   return (
     <Grid container spacing={3}>
-      <Grid item xs={1} sx={{ mt: 3, ml: 3 }}>
-        <Link href="/company">
-          <img src="/common/back.png" height={30} />
-        </Link>
-      </Grid>
-      <Grid item xs={9} sx={{ textAlign: 'center', mt: 2, ml: 2 }}>
+      <Grid item xs={11} sx={{ textAlign: 'center', mt: 10, ml: 2 }}>
         <Paper
           sx={{
             p: '2px 4px',

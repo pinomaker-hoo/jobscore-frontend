@@ -26,21 +26,18 @@ const SelectWantPageView = ({ count, handleChange }: Props) => {
   const selectData = [...questionData2]
 
   return (
-    <Grid container sx={{ backgroundColor: '#F4BC00', height: '100%' }}>
-      <Grid item xs={3} sx={{ pl: 3, pt: 3 }}>
-        <img src="/common/backWhite.png" />
-      </Grid>
-      <Grid item xs={9} sx={{ textAlign: 'right', pr: 3, pt: 3 }}>
+    <Grid container sx={{ backgroundColor: '#F4BC00' }}>
+      <Grid item xs={12} sx={{ textAlign: 'right', pr: 3, pt: 3 }}>
         <Typography variant="h6" sx={{ color: 'white' }}>
           {count + 21} / 40
         </Typography>
       </Grid>
-      <Grid item xs={12} sx={{ textAlign: 'center', mt: -5, mb: -5 }}>
+      <Grid item xs={12} sx={{ textAlign: 'center', mt: -10, mb: -5 }}>
         <Lottie options={defaultOptions} width={350} />
       </Grid>
       <Grid item xs={0.5} />
       <Grid item xs={11}>
-        <Card sx={{ width: '100%', p: 2, borderRadius: 2, height: 470 }}>
+        <Card sx={{ width: '100%', p: 2, borderRadius: 2 }}>
           <Grid container>
             <Grid item xs={12} sx={{ textAlign: 'center', mt: -2.5 }}>
               <img src="/common/topBox.png" />
@@ -85,11 +82,11 @@ const SelectWantPageView = ({ count, handleChange }: Props) => {
                 </Button>
               </Grid>
             ))}
-            <Grid item xs={12} sx={{ height: 30 }} />
           </Grid>
         </Card>
       </Grid>
       <Grid item xs={0.5} />
+      <Grid item xs={12} sx={{ mb: 3 }} />
     </Grid>
   )
 }

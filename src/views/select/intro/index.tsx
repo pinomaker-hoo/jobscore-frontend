@@ -29,11 +29,8 @@ const SelectIntroPageView = () => {
   }
 
   return (
-    <Grid container sx={{ backgroundColor: '#629DD7', height: '100%' }}>
-      <Grid item xs={3} sx={{ pl: 3, pt: 3 }}>
-        <img src="/common/backWhite.png" />
-      </Grid>
-      <Grid item xs={12} sx={{ textAlign: 'center', mt: -5, mb: -5 }}>
+    <Grid container sx={{ backgroundColor: '#629DD7' }}>
+      <Grid item xs={12} sx={{ textAlign: 'center', mb: -5, mt: -5 }}>
         <Lottie options={defaultOptions} width={350} />
       </Grid>
       <Grid item xs={0.5} />
@@ -81,6 +78,7 @@ const SelectIntroPageView = () => {
         </Card>
       </Grid>
       <Grid item xs={0.5} />
+      <Grid item xs={12} sx={{ mb: 3 }} />
     </Grid>
   )
 }

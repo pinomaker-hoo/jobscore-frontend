@@ -39,11 +39,6 @@ const CategoryPageView = ({
 }: Props) => {
   return (
     <Box display="flex" flexDirection="column">
-      <Box mt={3} ml={3}>
-        <Link href="/company">
-          <img src="/common/back.png" height={30} />
-        </Link>
-      </Box>
       <Box ml={3} mt={10} textAlign="left">
         <Typography variant="h4">
           현재 근무중인
