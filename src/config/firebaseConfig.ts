@@ -1,16 +1,15 @@
 // ** Firebase Imports
 import { initializeApp } from 'firebase/app'
 import { getFirestore } from 'firebase/firestore'
-import { getAnalytics } from 'firebase/analytics'
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyCNGcbLn9wOPoK9ZbqsiFBcDwfwjl8v0Go',
-  authDomain: 'jobscore-24472.firebaseapp.com',
-  projectId: 'jobscore-24472',
-  storageBucket: 'jobscore-24472.appspot.com',
-  messagingSenderId: '362585290695',
-  appId: '1:362585290695:web:74a6d784e2b0bd5582cbe2',
-  measurementId: 'G-0CS91SZR6T',
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_APIKEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTHDOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECTID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGEBUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGINGSENDERID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APPID,
+  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREEMENTID,
 }
 
 const app = initializeApp(firebaseConfig)
