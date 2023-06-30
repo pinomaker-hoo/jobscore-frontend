@@ -46,6 +46,30 @@ const ResultPageView = ({
     return 'black'
   }
 
+  const myCompanyState = useMemo(() => {
+    if (score.myCompany > 500) {
+      return 0
+    }
+
+    if (score.myCompany > 300) {
+      return 1
+    }
+
+    return 2
+  }, [score.myCompany])
+
+  const wantCompanyState = useMemo(() => {
+    if (score.wantCompany > 500) {
+      return 0
+    }
+
+    if (score.wantCompany > 300) {
+      return 1
+    }
+
+    return 2
+  }, [score.wantCompany])
+
   return (
     <Grid container spacing={3}>
       <Grid item xs={4.5}>
@@ -87,12 +111,31 @@ const ResultPageView = ({
                   />
                 </Grid>
                 <Grid item xs={12} sx={{ textAlign: 'center', mt: 2 }}>
-                  <Typography variant="body2">
-                    <b>
-                      꿈의 회사가 실존 하네요! <br />
-                      나는 지금 회사에 몇퍼센트 만족하시나요?
-                    </b>
-                  </Typography>
+                  {myCompanyState === 0 && (
+                    <Typography variant="body2">
+                      <b>
+                        꽤 높은 점수의 회사에요!
+                        <br />
+                        이보다 좋은 회사를 찾기 힘들지도 몰라요
+                      </b>
+                    </Typography>
+                  )}
+                  {myCompanyState === 1 && (
+                    <Typography variant="body2">
+                      <b>
+                        평균 점수대의 회사에요!
+                        <br />잘 맞는부분이 많다면 스테이!
+                      </b>
+                    </Typography>
+                  )}
+                  {myCompanyState === 2 && (
+                    <Typography variant="body2">
+                      <b>
+                        점수가 낮은편이지만 괜찮아요 <br />
+                        세상엔 더 좋은회사가 많으니까요
+                      </b>
+                    </Typography>
+                  )}
                 </Grid>
                 <Grid item xs={12} sx={{ mt: 2 }}>
                   <Divider
@@ -302,12 +345,30 @@ const ResultPageView = ({
                   />
                 </Grid>
                 <Grid item xs={12} sx={{ textAlign: 'center', mt: 2 }}>
-                  <Typography variant="body2">
-                    <b>
-                      꿈의 회사가 실존 하네요! <br />
-                      나는 지금 회사에 몇퍼센트 만족하시나요?
-                    </b>
-                  </Typography>
+                  {wantCompanyState === 0 && (
+                    <Typography variant="body2">
+                      <b>
+                        높은 점수의 회사를 원해요! <br />
+                        이런 회사는 어디에 있을까요?
+                      </b>
+                    </Typography>
+                  )}
+                  {wantCompanyState === 1 && (
+                    <Typography variant="body2">
+                      <b>
+                        평균 점수대의 회사에요! <br /> 잘 찾아보면 많이
+                        있을거에요
+                      </b>
+                    </Typography>
+                  )}
+                  {wantCompanyState === 2 && (
+                    <Typography variant="body2">
+                      <b>
+                        많이 바라는게 없기에 <br />
+                        이직시 선택의 폭이 넓어요!
+                      </b>
+                    </Typography>
+                  )}
                 </Grid>
                 <Grid item xs={12} sx={{ mt: 2 }}>
                   <Divider
