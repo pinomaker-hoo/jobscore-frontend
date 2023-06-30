@@ -587,7 +587,7 @@ const ResultPageView = ({
                   <Typography
                     variant="h6"
                     sx={{
-                      color: getTextColor(wantCompany.type1, myCompany.type1),
+                      color: getTextColor(myCompany.type1, wantCompany.type1),
                       fontWeight:
                         myCompany.type1 > wantCompany.type1 ? 'bold' : 'medium',
                     }}
@@ -652,7 +652,7 @@ const ResultPageView = ({
                   <Typography
                     variant="h6"
                     sx={{
-                      color: getTextColor(wantCompany.type1, myCompany.type1),
+                      color: getTextColor(myCompany.type1, wantCompany.type1),
                       fontWeight:
                         myCompany.type2 > wantCompany.type2 ? 'bold' : 'medium',
                     }}
@@ -687,7 +687,7 @@ const ResultPageView = ({
                 <Grid item xs={4}>
                   {wantCompany.type2 > myCompany.type2 && (
                     <Typography sx={{ color: 'blue' }}>
-                      ▲{wantCompany.type2 - myCompany.type2}\
+                      ▲{wantCompany.type2 - myCompany.type2}
                     </Typography>
                   )}
                 </Grid>
@@ -718,7 +718,7 @@ const ResultPageView = ({
                   <Typography
                     variant="h6"
                     sx={{
-                      color: getTextColor(wantCompany.type1, myCompany.type1),
+                      color: getTextColor(myCompany.type1, wantCompany.type1),
                       fontWeight:
                         myCompany.type3 > wantCompany.type3 ? 'bold' : 'medium',
                     }}
@@ -783,7 +783,7 @@ const ResultPageView = ({
                   <Typography
                     variant="h6"
                     sx={{
-                      color: getTextColor(wantCompany.type1, myCompany.type1),
+                      color: getTextColor(myCompany.type1, wantCompany.type1),
                       fontWeight:
                         myCompany.type4 > wantCompany.type4 ? 'bold' : 'medium',
                     }}
