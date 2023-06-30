@@ -34,6 +34,8 @@ const ResultPage = () => {
     },
   })
 
+  const PATH = 'http://jobscore.pinodev.shop:3000'
+
   const { myCompany, wantCompany } = useSelector(
     (state: RootState) => state.user.score
   )
@@ -63,7 +65,7 @@ const ResultPage = () => {
     await kakao.Share.sendCustom({
       templateId: 94310,
       templateArgs: {
-        image: 'http://phone.pinodev.shop:3000' + companyType.myCompany.img,
+        image: PATH + companyType.myCompany.img,
         style: companyType.myCompany.title,
         score:
           myCompany.type1 + myCompany.type2 + myCompany.type3 + myCompany.type4,
