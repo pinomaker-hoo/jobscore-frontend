@@ -56,11 +56,8 @@ const Home = () => {
       </Grid>
       <Grid item xs={12}>
         <Typography variant="body1" sx={{ textAlign: 'center' }}>
-          나의 업무 스타일과 우리 회사의 업무 스타일
-          <br />
-          나와 얼마나 잘 맞는지 까지 확인할 수 있어요
-          <br />
-          20문항이며 5분 내외에요
+          우리 회사와 내 원는 회사의 점수는?
+          <br />총 40문항이며 10분 정도 소요돼요
         </Typography>
       </Grid>
       <Grid item xs={12} sx={{ textAlign: 'center' }}>
