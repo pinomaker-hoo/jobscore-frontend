@@ -24,6 +24,7 @@ import { Result, ScoreType, TotalScore } from '@/types'
 
 // ** Other Imports
 import { CopyToClipboard } from 'react-copy-to-clipboard'
+import { isMobile } from 'react-device-detect'
 
 interface Props {
   companyType: Result
@@ -71,14 +72,14 @@ const ResultPageView = ({
   }, [score.wantCompany])
 
   return (
-    <Grid container spacing={3}>
+    <Grid container spacing={3} sx={{ overflow: 'scroll', maxHeight: '100vh' }}>
       <Grid item xs={4.5}>
         <img src="/common/logo.png" height={80} />
       </Grid>
       <Grid item xs={7.5} sx={{ mt: 1.5 }}>
         <WalkingDuck />
       </Grid>
-      <Grid item xs={12} sx={{ overflow: 'scroll', maxHeight: '730px' }}>
+      <Grid item xs={12}>
         <Grid container spacing={3}>
           <Grid item xs={12}>
             <Card
