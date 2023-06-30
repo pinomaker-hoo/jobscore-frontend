@@ -32,6 +32,7 @@ interface Props {
   wantCompany: ScoreType
   score: TotalScore
   handleKakao: () => void
+  PATH: string
 }
 
 const ResultPageView = ({
@@ -40,6 +41,7 @@ const ResultPageView = ({
   wantCompany,
   handleKakao,
   score,
+  PATH,
 }: Props) => {
   const getTextColor = (a: number, b: number) => {
     if (a > b) return 'blue'
@@ -853,7 +855,7 @@ const ResultPageView = ({
                 </Grid>
                 <Grid item xs={6} sx={{ textAlign: 'center' }}>
                   <CopyToClipboard
-                    text="http://phone.pinodev.shop:3000"
+                    text={PATH}
                     onCopy={() => alert('클립보드에 복사되었습니다.')}
                   >
                     <img src="/share/link.png" />
@@ -869,7 +871,7 @@ const ResultPageView = ({
                 </Grid>
                 <Grid item xs={6} sx={{ textAlign: 'center' }}>
                   <CopyToClipboard
-                    text="http://phone.pinodev.shop:3000"
+                    text={PATH}
                     onCopy={() => alert('클립보드에 복사되었습니다.')}
                   >
                     <Button sx={{ color: 'black', fontSize: 12, mt: -2 }}>

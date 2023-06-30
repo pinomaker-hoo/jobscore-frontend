@@ -64,6 +64,10 @@ const ResultPage = () => {
       templateId: 94310,
       templateArgs: {
         image: 'http://phone.pinodev.shop:3000' + companyType.myCompany.img,
+        style: companyType.myCompany.title,
+        score:
+          myCompany.type1 + myCompany.type2 + myCompany.type3 + myCompany.type4,
+        subTitle: companyType.myCompany.text,
       },
     })
   }
@@ -102,6 +106,7 @@ const ResultPage = () => {
       companyType={companyType}
       handleKakao={handleKakao}
       score={score}
+      PATH={PATH}
     />
   )
 }
