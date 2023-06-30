@@ -581,27 +581,21 @@ const ResultPageView = ({
                   </Typography>
                 </Grid>
                 <Grid item xs={8}>
-                  <Typography variant="h6">
-                    <span
-                      style={{
-                        color: getTextColor(myCompany.type1, wantCompany.type1),
-                      }}
-                    >
-                      {myCompany.type1}
-                    </span>{' '}
-                    / 180
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      color: getTextColor(wantCompany.type1, myCompany.type1),
+                      fontWeight:
+                        myCompany.type1 > wantCompany.type1 ? 'bold' : 'medium',
+                    }}
+                  >
+                    {myCompany.type1}
                   </Typography>
                 </Grid>
                 <Grid item xs={4}>
                   {myCompany.type1 > wantCompany.type1 && (
-                    <Typography>
-                      <span
-                        style={{
-                          color: 'blue',
-                        }}
-                      >
-                        ▲{myCompany.type1 - wantCompany.type1}
-                      </span>
+                    <Typography sx={{ color: 'blue' }}>
+                      ▲{myCompany.type1 - wantCompany.type1}
                     </Typography>
                   )}
                 </Grid>
@@ -611,27 +605,21 @@ const ResultPageView = ({
                   </Typography>
                 </Grid>
                 <Grid item xs={8}>
-                  <Typography variant="h6">
-                    <span
-                      style={{
-                        color: getTextColor(wantCompany.type1, myCompany.type1),
-                      }}
-                    >
-                      {wantCompany.type1}
-                    </span>{' '}
-                    / 180
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      color: getTextColor(wantCompany.type1, myCompany.type1),
+                      fontWeight:
+                        wantCompany.type1 > myCompany.type1 ? 'bold' : 'medium',
+                    }}
+                  >
+                    {wantCompany.type1}
                   </Typography>
                 </Grid>
                 <Grid item xs={4}>
                   {wantCompany.type1 > myCompany.type1 && (
-                    <Typography>
-                      <span
-                        style={{
-                          color: 'blue',
-                        }}
-                      >
-                        ▲{wantCompany.type1 - myCompany.type1}
-                      </span>
+                    <Typography sx={{ color: 'blue' }}>
+                      ▲{wantCompany.type1 - myCompany.type1}
                     </Typography>
                   )}
                 </Grid>
@@ -658,27 +646,21 @@ const ResultPageView = ({
                   </Typography>
                 </Grid>
                 <Grid item xs={8}>
-                  <Typography variant="h6">
-                    <span
-                      style={{
-                        color: getTextColor(myCompany.type2, wantCompany.type2),
-                      }}
-                    >
-                      {myCompany.type2}
-                    </span>{' '}
-                    / 180
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      color: getTextColor(wantCompany.type1, myCompany.type1),
+                      fontWeight:
+                        myCompany.type2 > wantCompany.type2 ? 'bold' : 'medium',
+                    }}
+                  >
+                    {myCompany.type2}
                   </Typography>
                 </Grid>
                 <Grid item xs={4}>
                   {myCompany.type2 > wantCompany.type2 && (
-                    <Typography>
-                      <span
-                        style={{
-                          color: 'blue',
-                        }}
-                      >
-                        ▲{myCompany.type2 - wantCompany.type2}
-                      </span>
+                    <Typography sx={{ color: 'blue' }}>
+                      ▲{myCompany.type2 - wantCompany.type2}
                     </Typography>
                   )}
                 </Grid>
@@ -688,27 +670,21 @@ const ResultPageView = ({
                   </Typography>
                 </Grid>
                 <Grid item xs={8}>
-                  <Typography variant="h6">
-                    <span
-                      style={{
-                        color: getTextColor(wantCompany.type2, myCompany.type2),
-                      }}
-                    >
-                      {wantCompany.type2}
-                    </span>{' '}
-                    / 180
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      color: getTextColor(wantCompany.type1, myCompany.type1),
+                      fontWeight:
+                        wantCompany.type2 > myCompany.type2 ? 'bold' : 'medium',
+                    }}
+                  >
+                    {wantCompany.type2}
                   </Typography>
                 </Grid>
                 <Grid item xs={4}>
                   {wantCompany.type2 > myCompany.type2 && (
-                    <Typography>
-                      <span
-                        style={{
-                          color: 'blue',
-                        }}
-                      >
-                        ▲{wantCompany.type2 - myCompany.type2}
-                      </span>
+                    <Typography sx={{ color: 'blue' }}>
+                      ▲{wantCompany.type2 - myCompany.type2}\
                     </Typography>
                   )}
                 </Grid>
@@ -736,27 +712,21 @@ const ResultPageView = ({
                   </Typography>
                 </Grid>
                 <Grid item xs={8}>
-                  <Typography variant="h6">
-                    <span
-                      style={{
-                        color: getTextColor(myCompany.type3, wantCompany.type3),
-                      }}
-                    >
-                      {myCompany.type3}
-                    </span>{' '}
-                    / 180
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      color: getTextColor(wantCompany.type1, myCompany.type1),
+                      fontWeight:
+                        myCompany.type3 > wantCompany.type3 ? 'bold' : 'medium',
+                    }}
+                  >
+                    {myCompany.type3}
                   </Typography>
                 </Grid>
                 <Grid item xs={4}>
                   {myCompany.type3 > wantCompany.type3 && (
-                    <Typography>
-                      <span
-                        style={{
-                          color: 'blue',
-                        }}
-                      >
-                        ▲{myCompany.type3 - wantCompany.type3}
-                      </span>
+                    <Typography sx={{ color: 'blue' }}>
+                      ▲{myCompany.type3 - wantCompany.type3}
                     </Typography>
                   )}
                 </Grid>
@@ -766,27 +736,21 @@ const ResultPageView = ({
                   </Typography>
                 </Grid>
                 <Grid item xs={8}>
-                  <Typography variant="h6">
-                    <span
-                      style={{
-                        color: getTextColor(wantCompany.type3, myCompany.type3),
-                      }}
-                    >
-                      {wantCompany.type3}
-                    </span>{' '}
-                    / 180
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      color: getTextColor(wantCompany.type1, myCompany.type1),
+                      fontWeight:
+                        wantCompany.type3 > myCompany.type3 ? 'bold' : 'medium',
+                    }}
+                  >
+                    {wantCompany.type3}
                   </Typography>
                 </Grid>
                 <Grid item xs={4}>
                   {wantCompany.type3 > myCompany.type3 && (
-                    <Typography>
-                      <span
-                        style={{
-                          color: 'blue',
-                        }}
-                      >
-                        ▲{wantCompany.type3 - myCompany.type3}
-                      </span>
+                    <Typography sx={{ color: 'blue' }}>
+                      ▲{wantCompany.type3 - myCompany.type3}
                     </Typography>
                   )}
                 </Grid>
@@ -813,27 +777,21 @@ const ResultPageView = ({
                   </Typography>
                 </Grid>
                 <Grid item xs={8}>
-                  <Typography variant="h6">
-                    <span
-                      style={{
-                        color: getTextColor(myCompany.type4, wantCompany.type4),
-                      }}
-                    >
-                      {myCompany.type4}
-                    </span>{' '}
-                    / 180
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      color: getTextColor(wantCompany.type1, myCompany.type1),
+                      fontWeight:
+                        myCompany.type4 > wantCompany.type4 ? 'bold' : 'medium',
+                    }}
+                  >
+                    {myCompany.type4}
                   </Typography>
                 </Grid>
                 <Grid item xs={4}>
                   {myCompany.type4 > wantCompany.type4 && (
-                    <Typography>
-                      <span
-                        style={{
-                          color: 'blue',
-                        }}
-                      >
-                        ▲{myCompany.type4 - wantCompany.type4}
-                      </span>
+                    <Typography sx={{ color: 'blue' }}>
+                      ▲{myCompany.type4 - wantCompany.type4}
                     </Typography>
                   )}
                 </Grid>
@@ -843,27 +801,21 @@ const ResultPageView = ({
                   </Typography>
                 </Grid>
                 <Grid item xs={8}>
-                  <Typography variant="h6">
-                    <span
-                      style={{
-                        color: getTextColor(wantCompany.type4, myCompany.type4),
-                      }}
-                    >
-                      {wantCompany.type4}
-                    </span>{' '}
-                    / 180
+                  <Typography
+                    variant="h6"
+                    sx={{
+                      color: getTextColor(wantCompany.type1, myCompany.type1),
+                      fontWeight:
+                        wantCompany.type4 > myCompany.type4 ? 'bold' : 'medium',
+                    }}
+                  >
+                    {wantCompany.type4}
                   </Typography>
                 </Grid>
                 <Grid item xs={4}>
                   {wantCompany.type4 > myCompany.type4 && (
-                    <Typography>
-                      <span
-                        style={{
-                          color: 'blue',
-                        }}
-                      >
-                        ▲{wantCompany.type4 - myCompany.type4}
-                      </span>
+                    <Typography sx={{ color: 'blue' }}>
+                      ▲{wantCompany.type4 - myCompany.type4}
                     </Typography>
                   )}
                 </Grid>
