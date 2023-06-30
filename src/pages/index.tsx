@@ -48,7 +48,7 @@ const Home = () => {
       <Grid item xs={7.5} sx={{ mt: 1.5 }}>
         <WalkingDuck />
       </Grid>
-      <Grid item xs={12} sx={{ textAlign: 'center' }}>
+      <Grid item xs={12} sx={{ textAlign: 'center', mt: -5 }}>
         <Lottie options={defaultOptions} height={250} width={300} />
       </Grid>
       <Grid item xs={12} sx={{ textAlign: 'center' }}>

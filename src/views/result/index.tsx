@@ -24,7 +24,6 @@ import { Result, ScoreType, TotalScore } from '@/types'
 
 // ** Other Imports
 import { CopyToClipboard } from 'react-copy-to-clipboard'
-import { isMobile } from 'react-device-detect'
 
 interface Props {
   companyType: Result

@@ -59,7 +59,7 @@ const LoadingPage = () => {
   }, [])
 
   return (
-    <Grid container spacing={6} sx={{ mt: 66.5 }}>
+    <Grid container spacing={6} sx={{ mt: 57 }}>
       <Grid item xs={4} />
       <Grid item xs={2}>
         <Lottie options={defaultOptionsDuck} height={80} width={80} />
