@@ -34,7 +34,8 @@ const ResultPage = () => {
     },
   })
 
-  const PATH = 'http://jobscore.pinodev.shop:3000'
+  const PATH =
+    process.env.NEXT_PUBLIC_HOST_URL || 'https://jobscore.swygbro.com'
 
   const { myCompany, wantCompany } = useSelector(
     (state: RootState) => state.user.score
