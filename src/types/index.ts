@@ -93,3 +93,12 @@ export interface SaveWantCompanyResult {
   department: string
   totalCount: number
 }
+
+export interface saveUser {
+  code: string
+  company: string
+  companyId: string
+  department: string
+  myTotalCount: number
+  myWantCount: number
+}
