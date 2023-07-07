@@ -28,7 +28,7 @@ const EndLoadingPage = () => {
 
   const {
     score: { myCompany, wantCompany },
-    company: { id, department },
+    company: { id, department, name },
   } = useSelector((state: RootState) => state.user)
 
   const defaultOptions = {
@@ -52,7 +52,7 @@ const EndLoadingPage = () => {
         (item: ResultComapnyType) => item.code === code
       )
 
-      return arr[0].code
+      return arr.length > 0 ? arr[0].code : '0000'
     },
     [companyTypeData]
   )
@@ -83,7 +83,7 @@ const EndLoadingPage = () => {
         wantCompany.type3 +
         wantCompany.type4,
     }
-    saveResult(saveMyCompany, saveWantCompany).then((res) => {
+    saveResult(saveMyCompany, saveWantCompany, name).then((res) => {
       router.push('/result')
     })
   }
