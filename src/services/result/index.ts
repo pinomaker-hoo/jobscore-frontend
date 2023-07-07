@@ -4,14 +4,22 @@ import { collection, setDoc, doc } from 'firebase/firestore'
 
 // ** Type Imports
 import { SaveMyCompanyResult, SaveWantCompanyResult } from '@/types'
+import dayjs from 'dayjs'
 
 const resultApi = {
   saveResult: async (
     myCompany: SaveMyCompanyResult,
     wantCompany: SaveWantCompanyResult
   ) => {
-    await setDoc(doc(collection(db, 'myCompanyResult')), myCompany)
-    await setDoc(doc(collection(db, 'wantCompanyResult')), wantCompany)
+    const createdAt = dayjs().format('YYYY.MM.DD HH:mm:ss')
+    await setDoc(doc(collection(db, 'myCompanyResult')), {
+      ...myCompany,
+      createdAt,
+    })
+    await setDoc(doc(collection(db, 'wantCompanyResult')), {
+      ...wantCompany,
+      createdAt,
+    })
   },
 }
 

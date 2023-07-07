@@ -12,9 +12,15 @@ import {
 // ** Type Imports
 import { CompanyType, SaveCompanyType } from '@/types'
 
+// ** Other Imports
+import dayjs from 'dayjs'
+
 const companyApi = {
   saveCompany: async (company: SaveCompanyType) => {
-    await setDoc(doc(collection(db, 'company')), company)
+    await setDoc(doc(collection(db, 'company')), {
+      ...company,
+      createdAt: dayjs().format('YYYY.MM.DD HH:mm:ss'),
+    })
   },
   findAllCompany: async (name: string): Promise<CompanyType[]> => {
     const querySnapshot = await getDocs(
