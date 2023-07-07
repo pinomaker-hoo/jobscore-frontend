@@ -35,7 +35,7 @@ const Home = () => {
   }
 
   useEffect(() => {
-    if (userState === initialState) {
+    if (userState !== initialState) {
       dispatch(initialize())
     }
   }, [userState])

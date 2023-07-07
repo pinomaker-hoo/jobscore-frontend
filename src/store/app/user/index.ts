@@ -51,7 +51,8 @@ export const userSlice = createSlice({
   initialState,
   reducers: {
     initialize: (state) => {
-      state = initialState
+      ;(state.company = initialState.company),
+        (state.score = initialState.score)
     },
     updateCompany: (state, { payload }) => {
       state.company = {
